@@ -2,7 +2,7 @@
 import Link from 'next/link';
 
 // --- Configuration ---
-const GITHUB_REPO_URL = "https://github.com/haripatelfanshawe/SOC-Windows-Event"; // Your Repo URL
+const GITHUB_REPO_URL = "https://github.com/packetwarden/WETNav"; // Your Repo URL
 const CURRENT_YEAR = new Date().getFullYear();
 // --- End Configuration ---
 
