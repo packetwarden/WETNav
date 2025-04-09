@@ -1,0 +1,75 @@
+/* src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Add any global base styles here */
+body {
+  /* Add your base body styles, e.g., background color for the whole page */
+  @apply bg-gray-900 text-gray-200 antialiased; /* Example dark theme base */
+  @apply transition-colors duration-300;
+}
+
+/* --- Custom Scrollbar Styling --- */
+
+/* VERTICAL Scrollbar Styling (used in EventDetailView content) */
+.custom-scrollbar-v::-webkit-scrollbar {
+  width: 8px; /* Width of the vertical scrollbar */
+}
+.custom-scrollbar-v::-webkit-scrollbar-track {
+  background: theme('colors.gray.800' / 0.6); /* Slightly darker/more transparent track */
+  border-radius: 10px;
+  margin-block: 2px; /* Optional: Adds a little space top/bottom */
+}
+.custom-scrollbar-v::-webkit-scrollbar-thumb {
+  background: theme('colors.gray.600'); /* Slightly darker thumb */
+  border-radius: 10px;
+  border: 2px solid transparent; /* Creates padding around thumb */
+  background-clip: padding-box;
+}
+.custom-scrollbar-v::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.gray.500');
+}
+/* Firefox styling for vertical scrollbar */
+.custom-scrollbar-v {
+    scrollbar-width: thin; /* Can be "auto", "thin", or "none" */
+    scrollbar-color: theme('colors.gray.600') theme('colors.gray.800' / 0.6); /* thumb track */
+}
+
+
+/* HORIZONTAL Scrollbar Styling (used for MITRE tabs) */
+.custom-scrollbar-h::-webkit-scrollbar {
+  height: 8px; /* Height of the horizontal scrollbar - increased slightly for easier grabbing */
+}
+.custom-scrollbar-h::-webkit-scrollbar-track {
+  background: theme('colors.gray.800' / 0.5); /* Consistent track */
+  border-radius: 10px;
+  margin-inline: 2px; /* Optional: Adds a little space left/right */
+}
+.custom-scrollbar-h::-webkit-scrollbar-thumb {
+  background: theme('colors.gray.600'); /* Consistent thumb */
+  border-radius: 10px;
+   border: 2px solid transparent; /* Creates padding around thumb */
+  background-clip: padding-box;
+}
+.custom-scrollbar-h::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.gray.500'); /* Consistent hover */
+}
+/* Firefox styling for horizontal scrollbar */
+.custom-scrollbar-h {
+    scrollbar-width: thin; /* Keep thin for horizontal */
+    scrollbar-color: theme('colors.gray.600') theme('colors.gray.800' / 0.5); /* thumb track */
+}
+
+
+/* --- Prose Styling Override (Optional) --- */
+/* Ensures list markers match the theme */
+.prose ul > li::marker {
+    color: theme('colors.gray.500');
+}
+/* You might add other prose overrides here if needed, e.g., link colors */
+.prose a {
+    @apply text-blue-400 hover:text-blue-300;
+}
+
+/* --- Add other global component styles or utilities below --- */
