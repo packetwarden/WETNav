@@ -9,7 +9,7 @@ import AboutModal from './AboutModal'; // Import the modal
 
 // --- Configuration ---
 const TOOL_NAME = "Windows Event Threat Navigator";
-const GITHUB_REPO_URL = "https://github.com/haripatelfanshawe/SOC-Windows-Event";
+const GITHUB_REPO_URL = "https://github.com/packetwarden/WETNav";
 // --- End Configuration ---
 
 export default function Header() {
