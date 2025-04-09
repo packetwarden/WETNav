@@ -4,8 +4,7 @@
 
 <!-- <<< Add a compelling screenshot/GIF of the application here! >>> -->
 <!-- Example: ![App Screenshot](link/to/your/screenshot.png) -->
-[![Vercel Deployment](https://vercel.com/button)](<<<YOUR_VERCEL_DEPLOYMENT_URL>>>)
-
+![Vercel Deployment](https://vercel.com/button)
 ---
 
 ## About This Project: The Vibe ✨
