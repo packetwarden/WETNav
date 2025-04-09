@@ -91,7 +91,7 @@ Explore the deployed tool here:
 Want to play around with the code?
 
 1.  **Prerequisites:** Node.js (v18.17+), npm/yarn/pnpm.
-2.  **Clone:** `git clone https://github.com/haripatelfanshawe/SOC-Windows-Event.git && cd SOC-Windows-Event`
+2.  **Clone:** `https://github.com/packetwarden/WETNav.git && cd WETNav`
 3.  **Install:** `npm install` (or yarn/pnpm)
 4.  **Run:** `npm run dev` (or yarn/pnpm)
 5.  Open [http://localhost:3000](http://localhost:3000).
