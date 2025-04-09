@@ -11,7 +11,7 @@ interface AboutModalProps {
 // --- Configuration ---
 // >>> IMPORTANT: Replace this with the name you chose! <<<
 const TOOL_NAME = "Windows Event Threat Navigator";
-const GITHUB_REPO_URL = "https://github.com/haripatelfanshawe/SOC-Windows-Event"; // Your Repo URL
+const GITHUB_REPO_URL = "https://github.com/packetwarden/WETNav"; // Your Repo URL
 // --- End Configuration ---
 
 export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
