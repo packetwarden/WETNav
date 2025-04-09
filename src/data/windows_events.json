@@ -1,0 +1,2648 @@
+[
+  {
+    "id": "4608",
+    "source": "Windows Security",
+    "name": "Windows is starting up.",
+    "description": "Windows is starting up."
+  },
+  {
+    "id": "4609",
+    "source": "Windows Security",
+    "name": "Windows is shutting down.",
+    "description": "Windows is shutting down."
+  },
+  {
+    "id": "4610",
+    "source": "Windows Security",
+    "name": "An authentication package has been loaded by the Local Security Authority.",
+    "description": "An authentication package has been loaded by the Local Security Authority."
+  },
+  {
+    "id": "4611",
+    "source": "Windows Security",
+    "name": "A trusted logon process has been registered with the Local Security Authority.",
+    "description": "A trusted logon process has been registered with the Local Security Authority."
+  },
+  {
+    "id": "4612",
+    "source": "Windows Security",
+    "name": "Internal resources allocated for the queuing of audit messages have been exhausted, leading to the loss of some audits.",
+    "description": "Internal resources allocated for the queuing of audit messages have been exhausted, leading to the loss of some audits."
+  },
+  {
+    "id": "4614",
+    "source": "Windows Security",
+    "name": "A notification package has been loaded by the Security Account Manager.",
+    "description": "A notification package has been loaded by the Security Account Manager."
+  },
+  {
+    "id": "4615",
+    "source": "Windows Security",
+    "name": "Invalid use of LPC port.",
+    "description": "Invalid use of LPC port."
+  },
+  {
+    "id": "4616",
+    "source": "Windows Security",
+    "name": "The system time was changed.",
+    "description": "The system time was changed."
+  },
+  {
+    "id": "4618",
+    "source": "Windows Security",
+    "name": "A monitored security event pattern has occurred.",
+    "description": "A monitored security event pattern has occurred."
+  },
+  {
+    "id": "4621",
+    "source": "Windows Security",
+    "name": "Administrator recovered system from CrashOnAuditFail.",
+    "description": "Administrator recovered system from CrashOnAuditFail. Users who are not administrators will now be allowed to log on. Some auditable activity might not have been recorded."
+  },
+  {
+    "id": "4622",
+    "source": "Windows Security",
+    "name": "A security package has been loaded by the Local Security Authority.",
+    "description": "A security package has been loaded by the Local Security Authority."
+  },
+  {
+    "id": "4624",
+    "source": "Windows Security",
+    "name": "An account was successfully logged on.",
+    "description": "An account was successfully logged on."
+  },
+  {
+    "id": "4625",
+    "source": "Windows Security",
+    "name": "An account failed to log on.",
+    "description": "An account failed to log on."
+  },
+  {
+    "id": "4626",
+    "source": "Windows Security",
+    "name": "User/Device claims information.",
+    "description": "User/Device claims information."
+  },
+  {
+    "id": "4627",
+    "source": "Windows Security",
+    "name": "Group membership information.",
+    "description": "Group membership information provided when an account successfully logs on."
+  },
+  {
+    "id": "4634",
+    "source": "Windows Security",
+    "name": "An account was logged off.",
+    "description": "An account was logged off."
+  },
+  {
+    "id": "4646",
+    "source": "Windows Security",
+    "name": "IKE DoS prevention mode started.",
+    "description": "Internet Key Exchange (IKE) protocol DoS prevention mode started."
+  },
+  {
+    "id": "4647",
+    "source": "Windows Security",
+    "name": "User initiated logoff.",
+    "description": "User initiated logoff."
+  },
+  {
+    "id": "4648",
+    "source": "Windows Security",
+    "name": "A logon was attempted using explicit credentials.",
+    "description": "A logon was attempted using explicit credentials (e.g., RunAs)."
+  },
+  {
+    "id": "4649",
+    "source": "Windows Security",
+    "name": "A replay attack was detected.",
+    "description": "A replay attack was detected (Kerberos, NTLM, or Digest)."
+  },
+  {
+    "id": "4650",
+    "source": "Windows Security",
+    "name": "An IPsec Main Mode security association was established (No Certificate).",
+    "description": "An IPsec Main Mode security association was established. Extended Mode was not enabled. Certificate authentication was not used."
+  },
+  {
+    "id": "4651",
+    "source": "Windows Security",
+    "name": "An IPsec Main Mode security association was established (Certificate).",
+    "description": "An IPsec Main Mode security association was established. Extended Mode was not enabled. A certificate was used for authentication."
+  },
+  {
+    "id": "4652",
+    "source": "Windows Security",
+    "name": "An IPsec Main Mode negotiation failed.",
+    "description": "An IPsec Main Mode negotiation failed (often includes reason for failure)."
+  },
+  {
+    "id": "4653",
+    "source": "Windows Security",
+    "name": "An IPsec Main Mode negotiation failed.",
+    "description": "An IPsec Main Mode negotiation failed (often includes reason for failure)."
+  },
+  {
+    "id": "4654",
+    "source": "Windows Security",
+    "name": "An IPsec Quick Mode negotiation failed.",
+    "description": "An IPsec Quick Mode negotiation failed."
+  },
+  {
+    "id": "4655",
+    "source": "Windows Security",
+    "name": "An IPsec Main Mode security association ended.",
+    "description": "An IPsec Main Mode security association ended."
+  },
+  {
+    "id": "4656",
+    "source": "Windows Security",
+    "name": "A handle to an object was requested.",
+    "description": "A handle to an object was requested."
+  },
+  {
+    "id": "4657",
+    "source": "Windows Security",
+    "name": "A registry value was modified.",
+    "description": "A registry value was modified."
+  },
+  {
+    "id": "4658",
+    "source": "Windows Security",
+    "name": "The handle to an object was closed.",
+    "description": "The handle to an object was closed."
+  },
+  {
+    "id": "4659",
+    "source": "Windows Security",
+    "name": "A handle to an object was requested with intent to delete.",
+    "description": "A handle to an object was requested with intent to delete (Kernel object or SAM object)."
+  },
+  {
+    "id": "4660",
+    "source": "Windows Security",
+    "name": "An object was deleted.",
+    "description": "An object was deleted (Kernel object or SAM object)."
+  },
+  {
+    "id": "4661",
+    "source": "Windows Security",
+    "name": "A handle to an object was requested.",
+    "description": "A handle to an object was requested (SAM Server object)."
+  },
+  {
+    "id": "4662",
+    "source": "Windows Security",
+    "name": "An operation was performed on an object.",
+    "description": "An operation was performed on an object (e.g., AD object modified)."
+  },
+  {
+    "id": "4663",
+    "source": "Windows Security",
+    "name": "An attempt was made to access an object.",
+    "description": "An attempt was made to access an object (e.g., File System, Registry)."
+  },
+  {
+    "id": "4664",
+    "source": "Windows Security",
+    "name": "An attempt was made to create a hard link.",
+    "description": "An attempt was made to create a hard link."
+  },
+  {
+    "id": "4665",
+    "source": "Windows Security",
+    "name": "An attempt was made to create an application client context.",
+    "description": "An attempt was made to create an application client context."
+  },
+  {
+    "id": "4666",
+    "source": "Windows Security",
+    "name": "An application attempted an operation.",
+    "description": "An application attempted an operation."
+  },
+  {
+    "id": "4667",
+    "source": "Windows Security",
+    "name": "An application client context was deleted.",
+    "description": "An application client context was deleted."
+  },
+  {
+    "id": "4668",
+    "source": "Windows Security",
+    "name": "An application was initialized.",
+    "description": "An application was initialized."
+  },
+  {
+    "id": "4670",
+    "source": "Windows Security",
+    "name": "Permissions on an object were changed.",
+    "description": "Permissions on an object were changed."
+  },
+  {
+    "id": "4671",
+    "source": "Windows Security",
+    "name": "An application attempted to access a blocked ordinal through the TBS.",
+    "description": "An application attempted to access a blocked ordinal through the Trusted Platform Module Base Services (TBS)."
+  },
+  {
+    "id": "4672",
+    "source": "Windows Security",
+    "name": "Special privileges assigned to new logon.",
+    "description": "Special privileges (e.g., SeDebugPrivilege) were assigned to a new logon session."
+  },
+  {
+    "id": "4673",
+    "source": "Windows Security",
+    "name": "A privileged service was called.",
+    "description": "A privileged service was called (sensitive privileges used)."
+  },
+  {
+    "id": "4674",
+    "source": "Windows Security",
+    "name": "An operation was attempted on a privileged object.",
+    "description": "An operation was attempted on a privileged object."
+  },
+  {
+    "id": "4675",
+    "source": "Windows Security",
+    "name": "SIDs were filtered.",
+    "description": "SIDs were filtered (logon session)."
+  },
+  {
+    "id": "4688",
+    "source": "Windows Security",
+    "name": "A new process has been created.",
+    "description": "A new process has been created."
+  },
+  {
+    "id": "4689",
+    "source": "Windows Security",
+    "name": "A process has exited.",
+    "description": "A process has exited."
+  },
+  {
+    "id": "4690",
+    "source": "Windows Security",
+    "name": "An attempt was made to duplicate a handle to an object.",
+    "description": "An attempt was made to duplicate a handle to an object."
+  },
+  {
+    "id": "4691",
+    "source": "Windows Security",
+    "name": "Indirect access to an object was requested.",
+    "description": "Indirect access to an object was requested."
+  },
+  {
+    "id": "4692",
+    "source": "Windows Security",
+    "name": "Backup of data protection master key was attempted.",
+    "description": "Backup of data protection master key was attempted."
+  },
+  {
+    "id": "4693",
+    "source": "Windows Security",
+    "name": "Recovery of data protection master key was attempted.",
+    "description": "Recovery of data protection master key was attempted."
+  },
+  {
+    "id": "4694",
+    "source": "Windows Security",
+    "name": "Protection of auditable protected data was attempted.",
+    "description": "Protection of auditable protected data was attempted."
+  },
+  {
+    "id": "4695",
+    "source": "Windows Security",
+    "name": "Unprotection of auditable protected data was attempted.",
+    "description": "Unprotection of auditable protected data was attempted."
+  },
+  {
+    "id": "4696",
+    "source": "Windows Security",
+    "name": "A primary token was assigned to process.",
+    "description": "A primary token was assigned to process."
+  },
+  {
+    "id": "4697",
+    "source": "Windows Security",
+    "name": "A service was installed in the system.",
+    "description": "A service was installed in the system."
+  },
+  {
+    "id": "4698",
+    "source": "Windows Security",
+    "name": "A scheduled task was created.",
+    "description": "A scheduled task was created."
+  },
+  {
+    "id": "4699",
+    "source": "Windows Security",
+    "name": "A scheduled task was deleted.",
+    "description": "A scheduled task was deleted."
+  },
+  {
+    "id": "4700",
+    "source": "Windows Security",
+    "name": "A scheduled task was enabled.",
+    "description": "A scheduled task was enabled."
+  },
+  {
+    "id": "4701",
+    "source": "Windows Security",
+    "name": "A scheduled task was disabled.",
+    "description": "A scheduled task was disabled."
+  },
+  {
+    "id": "4702",
+    "source": "Windows Security",
+    "name": "A scheduled task was updated.",
+    "description": "A scheduled task was updated."
+  },
+  {
+    "id": "4703",
+    "source": "Windows Security",
+    "name": "A user right was adjusted.",
+    "description": "A user right was adjusted (enabled or disabled)."
+  },
+  {
+    "id": "4704",
+    "source": "Windows Security",
+    "name": "A user right was assigned.",
+    "description": "A user right was assigned."
+  },
+  {
+    "id": "4705",
+    "source": "Windows Security",
+    "name": "A user right was removed.",
+    "description": "A user right was removed."
+  },
+  {
+    "id": "4706",
+    "source": "Windows Security",
+    "name": "A new trust was created to a domain.",
+    "description": "A new trust was created to a domain."
+  },
+  {
+    "id": "4707",
+    "source": "Windows Security",
+    "name": "A trust to a domain was removed.",
+    "description": "A trust to a domain was removed."
+  },
+  {
+    "id": "4709",
+    "source": "Windows Security",
+    "name": "IPsec Services was started.",
+    "description": "IPsec Services was started."
+  },
+  {
+    "id": "4710",
+    "source": "Windows Security",
+    "name": "IPsec Services was disabled.",
+    "description": "IPsec Services was disabled."
+  },
+  {
+    "id": "4711",
+    "source": "Windows Security",
+    "name": "PAStore Engine applied IPsec policy.",
+    "description": "Describes application or failure of IPsec policy (local registry, AD cached, or live AD)."
+  },
+  {
+    "id": "4712",
+    "source": "Windows Security",
+    "name": "IPsec Services encountered a potentially serious failure.",
+    "description": "IPsec Services encountered a potentially serious failure."
+  },
+  {
+    "id": "4713",
+    "source": "Windows Security",
+    "name": "Kerberos policy was changed.",
+    "description": "Kerberos policy was changed."
+  },
+  {
+    "id": "4714",
+    "source": "Windows Security",
+    "name": "Encrypted data recovery policy was changed.",
+    "description": "Encrypted data recovery policy was changed."
+  },
+  {
+    "id": "4715",
+    "source": "Windows Security",
+    "name": "The audit policy (SACL) on an object was changed.",
+    "description": "The audit policy (System Access Control List - SACL) on an object was changed."
+  },
+  {
+    "id": "4716",
+    "source": "Windows Security",
+    "name": "Trusted domain information was modified.",
+    "description": "Trusted domain information was modified."
+  },
+  {
+    "id": "4717",
+    "source": "Windows Security",
+    "name": "System security access was granted to an account.",
+    "description": "System security access was granted to an account."
+  },
+  {
+    "id": "4718",
+    "source": "Windows Security",
+    "name": "System security access was removed from an account.",
+    "description": "System security access was removed from an account."
+  },
+  {
+    "id": "4719",
+    "source": "Windows Security",
+    "name": "System audit policy was changed.",
+    "description": "System audit policy was changed."
+  },
+  {
+    "id": "4720",
+    "source": "Windows Security",
+    "name": "A user account was created.",
+    "description": "A user account was created."
+  },
+  {
+    "id": "4722",
+    "source": "Windows Security",
+    "name": "A user account was enabled.",
+    "description": "A user account was enabled."
+  },
+  {
+    "id": "4723",
+    "source": "Windows Security",
+    "name": "An attempt was made to change an account's password.",
+    "description": "An attempt was made to change an account's password."
+  },
+  {
+    "id": "4724",
+    "source": "Windows Security",
+    "name": "An attempt was made to reset an account's password.",
+    "description": "An attempt was made to reset an account's password."
+  },
+  {
+    "id": "4725",
+    "source": "Windows Security",
+    "name": "A user account was disabled.",
+    "description": "A user account was disabled."
+  },
+  {
+    "id": "4726",
+    "source": "Windows Security",
+    "name": "A user account was deleted.",
+    "description": "A user account was deleted."
+  },
+  {
+    "id": "4727",
+    "source": "Windows Security",
+    "name": "A security-enabled global group was created.",
+    "description": "A security-enabled global group was created."
+  },
+  {
+    "id": "4728",
+    "source": "Windows Security",
+    "name": "A member was added to a security-enabled global group.",
+    "description": "A member was added to a security-enabled global group."
+  },
+  {
+    "id": "4729",
+    "source": "Windows Security",
+    "name": "A member was removed from a security-enabled global group.",
+    "description": "A member was removed from a security-enabled global group."
+  },
+  {
+    "id": "4730",
+    "source": "Windows Security",
+    "name": "A security-enabled global group was deleted.",
+    "description": "A security-enabled global group was deleted."
+  },
+  {
+    "id": "4731",
+    "source": "Windows Security",
+    "name": "A security-enabled local group was created.",
+    "description": "A security-enabled local group was created."
+  },
+  {
+    "id": "4732",
+    "source": "Windows Security",
+    "name": "A member was added to a security-enabled local group.",
+    "description": "A member was added to a security-enabled local group."
+  },
+  {
+    "id": "4733",
+    "source": "Windows Security",
+    "name": "A member was removed from a security-enabled local group.",
+    "description": "A member was removed from a security-enabled local group."
+  },
+  {
+    "id": "4734",
+    "source": "Windows Security",
+    "name": "A security-enabled local group was deleted.",
+    "description": "A security-enabled local group was deleted."
+  },
+  {
+    "id": "4735",
+    "source": "Windows Security",
+    "name": "A security-enabled local group was changed.",
+    "description": "A security-enabled local group was changed."
+  },
+  {
+    "id": "4737",
+    "source": "Windows Security",
+    "name": "A security-enabled global group was changed.",
+    "description": "A security-enabled global group was changed."
+  },
+  {
+    "id": "4738",
+    "source": "Windows Security",
+    "name": "A user account was changed.",
+    "description": "A user account was changed."
+  },
+  {
+    "id": "4739",
+    "source": "Windows Security",
+    "name": "Domain Policy was changed.",
+    "description": "Domain Policy was changed (LSA object)."
+  },
+  {
+    "id": "4740",
+    "source": "Windows Security",
+    "name": "A user account was locked out.",
+    "description": "A user account was locked out."
+  },
+  {
+    "id": "4741",
+    "source": "Windows Security",
+    "name": "A computer account was created.",
+    "description": "A computer account was created."
+  },
+  {
+    "id": "4742",
+    "source": "Windows Security",
+    "name": "A computer account was changed.",
+    "description": "A computer account was changed."
+  },
+  {
+    "id": "4743",
+    "source": "Windows Security",
+    "name": "A computer account was deleted.",
+    "description": "A computer account was deleted."
+  },
+  {
+    "id": "4744",
+    "source": "Windows Security",
+    "name": "A security-disabled local group was created.",
+    "description": "A security-disabled local group (distribution group) was created."
+  },
+  {
+    "id": "4745",
+    "source": "Windows Security",
+    "name": "A security-disabled local group was changed.",
+    "description": "A security-disabled local group (distribution group) was changed."
+  },
+  {
+    "id": "4746",
+    "source": "Windows Security",
+    "name": "A member was added to a security-disabled local group.",
+    "description": "A member was added to a security-disabled local group (distribution group)."
+  },
+  {
+    "id": "4747",
+    "source": "Windows Security",
+    "name": "A member was removed from a security-disabled local group.",
+    "description": "A member was removed from a security-disabled local group (distribution group)."
+  },
+  {
+    "id": "4748",
+    "source": "Windows Security",
+    "name": "A security-disabled local group was deleted.",
+    "description": "A security-disabled local group (distribution group) was deleted."
+  },
+  {
+    "id": "4749",
+    "source": "Windows Security",
+    "name": "A security-disabled global group was created.",
+    "description": "A security-disabled global group (distribution group) was created."
+  },
+  {
+    "id": "4750",
+    "source": "Windows Security",
+    "name": "A security-disabled global group was changed.",
+    "description": "A security-disabled global group (distribution group) was changed."
+  },
+  {
+    "id": "4751",
+    "source": "Windows Security",
+    "name": "A member was added to a security-disabled global group.",
+    "description": "A member was added to a security-disabled global group (distribution group)."
+  },
+  {
+    "id": "4752",
+    "source": "Windows Security",
+    "name": "A member was removed from a security-disabled global group.",
+    "description": "A member was removed from a security-disabled global group (distribution group)."
+  },
+  {
+    "id": "4753",
+    "source": "Windows Security",
+    "name": "A security-disabled global group was deleted.",
+    "description": "A security-disabled global group (distribution group) was deleted."
+  },
+  {
+    "id": "4754",
+    "source": "Windows Security",
+    "name": "A security-enabled universal group was created.",
+    "description": "A security-enabled universal group was created."
+  },
+  {
+    "id": "4755",
+    "source": "Windows Security",
+    "name": "A security-enabled universal group was changed.",
+    "description": "A security-enabled universal group was changed."
+  },
+  {
+    "id": "4756",
+    "source": "Windows Security",
+    "name": "A member was added to a security-enabled universal group.",
+    "description": "A member was added to a security-enabled universal group."
+  },
+  {
+    "id": "4757",
+    "source": "Windows Security",
+    "name": "A member was removed from a security-enabled universal group.",
+    "description": "A member was removed from a security-enabled universal group."
+  },
+  {
+    "id": "4758",
+    "source": "Windows Security",
+    "name": "A security-enabled universal group was deleted.",
+    "description": "A security-enabled universal group was deleted."
+  },
+  {
+    "id": "4759",
+    "source": "Windows Security",
+    "name": "A security-disabled universal group was created.",
+    "description": "A security-disabled universal group (distribution group) was created."
+  },
+  {
+    "id": "4760",
+    "source": "Windows Security",
+    "name": "A security-disabled universal group was changed.",
+    "description": "A security-disabled universal group (distribution group) was changed."
+  },
+  {
+    "id": "4761",
+    "source": "Windows Security",
+    "name": "A member was added to a security-disabled universal group.",
+    "description": "A member was added to a security-disabled universal group (distribution group)."
+  },
+  {
+    "id": "4762",
+    "source": "Windows Security",
+    "name": "A member was removed from a security-disabled universal group.",
+    "description": "A member was removed from a security-disabled universal group (distribution group)."
+  },
+  {
+    "id": "4763",
+    "source": "Windows Security",
+    "name": "A security-disabled universal group was deleted.",
+    "description": "A security-disabled universal group (distribution group) was deleted."
+  },
+  {
+    "id": "4764",
+    "source": "Windows Security",
+    "name": "A group’s type was changed.",
+    "description": "A group’s type was changed."
+  },
+  {
+    "id": "4765",
+    "source": "Windows Security",
+    "name": "SID History was added to an account.",
+    "description": "SID History was added to an account."
+  },
+  {
+    "id": "4766",
+    "source": "Windows Security",
+    "name": "An attempt to add SID History to an account failed.",
+    "description": "An attempt to add SID History to an account failed."
+  },
+  {
+    "id": "4767",
+    "source": "Windows Security",
+    "name": "A user account was unlocked.",
+    "description": "A user account was unlocked."
+  },
+  {
+    "id": "4768",
+    "source": "Windows Security",
+    "name": "A Kerberos authentication ticket (TGT) was requested.",
+    "description": "A Kerberos authentication ticket (TGT) was requested."
+  },
+  {
+    "id": "4769",
+    "source": "Windows Security",
+    "name": "A Kerberos service ticket was requested.",
+    "description": "A Kerberos service ticket was requested."
+  },
+  {
+    "id": "4770",
+    "source": "Windows Security",
+    "name": "A Kerberos service ticket was renewed.",
+    "description": "A Kerberos service ticket was renewed."
+  },
+  {
+    "id": "4771",
+    "source": "Windows Security",
+    "name": "Kerberos pre-authentication failed.",
+    "description": "Kerberos pre-authentication failed."
+  },
+  {
+    "id": "4772",
+    "source": "Windows Security",
+    "name": "A Kerberos authentication ticket request failed.",
+    "description": "A Kerberos authentication ticket request failed."
+  },
+  {
+    "id": "4773",
+    "source": "Windows Security",
+    "name": "A Kerberos service ticket request failed.",
+    "description": "A Kerberos service ticket request failed."
+  },
+  {
+    "id": "4774",
+    "source": "Windows Security",
+    "name": "An account was mapped for logon.",
+    "description": "An account was mapped for logon (typically Kerberos)."
+  },
+  {
+    "id": "4775",
+    "source": "Windows Security",
+    "name": "An account could not be mapped for logon.",
+    "description": "An account could not be mapped for logon (typically Kerberos)."
+  },
+  {
+    "id": "4776",
+    "source": "Windows Security",
+    "name": "The domain controller attempted to validate the credentials for an account.",
+    "description": "The domain controller attempted to validate the credentials for an account (NTLM Authentication)."
+  },
+  {
+    "id": "4777",
+    "source": "Windows Security",
+    "name": "The domain controller failed to validate the credentials for an account.",
+    "description": "The domain controller failed to validate the credentials for an account (NTLM Authentication)."
+  },
+  {
+    "id": "4778",
+    "source": "Windows Security",
+    "name": "A session was reconnected to a Window Station.",
+    "description": "A session was reconnected to a Window Station."
+  },
+  {
+    "id": "4779",
+    "source": "Windows Security",
+    "name": "A session was disconnected from a Window Station.",
+    "description": "A session was disconnected from a Window Station."
+  },
+  {
+    "id": "4780",
+    "source": "Windows Security",
+    "name": "The ACL was set on accounts which are members of administrators groups.",
+    "description": "The Access Control List (ACL) was set on accounts which are members of administrators groups (AdminSDHolder)."
+  },
+  {
+    "id": "4781",
+    "source": "Windows Security",
+    "name": "The name of an account was changed.",
+    "description": "The name of an account was changed (SAM Account Name or UPN)."
+  },
+  {
+    "id": "4782",
+    "source": "Windows Security",
+    "name": "The password hash an account was accessed.",
+    "description": "The password hash of an account was accessed."
+  },
+  {
+    "id": "4783",
+    "source": "Windows Security",
+    "name": "A basic application group was created.",
+    "description": "A basic application group was created."
+  },
+  {
+    "id": "4784",
+    "source": "Windows Security",
+    "name": "A basic application group was changed.",
+    "description": "A basic application group was changed."
+  },
+  {
+    "id": "4785",
+    "source": "Windows Security",
+    "name": "A member was added to a basic application group.",
+    "description": "A member was added to a basic application group."
+  },
+  {
+    "id": "4786",
+    "source": "Windows Security",
+    "name": "A member was removed from a basic application group.",
+    "description": "A member was removed from a basic application group."
+  },
+  {
+    "id": "4787",
+    "source": "Windows Security",
+    "name": "A non-member was added to a basic application group.",
+    "description": "A non-member was added to a basic application group."
+  },
+  {
+    "id": "4788",
+    "source": "Windows Security",
+    "name": "A non-member was removed from a basic application group.",
+    "description": "A non-member was removed from a basic application group."
+  },
+  {
+    "id": "4789",
+    "source": "Windows Security",
+    "name": "A basic application group was deleted.",
+    "description": "A basic application group was deleted."
+  },
+  {
+    "id": "4790",
+    "source": "Windows Security",
+    "name": "An LDAP query group was created.",
+    "description": "An LDAP query group was created."
+  },
+  {
+    "id": "4791",
+    "source": "Windows Security",
+    "name": "An LDAP query group was changed.",
+    "description": "An LDAP query group was changed."
+  },
+  {
+    "id": "4792",
+    "source": "Windows Security",
+    "name": "An LDAP query group was deleted.",
+    "description": "An LDAP query group was deleted."
+  },
+  {
+    "id": "4793",
+    "source": "Windows Security",
+    "name": "The Password Policy Checking API was called.",
+    "description": "The Password Policy Checking API was called."
+  },
+  {
+    "id": "4794",
+    "source": "Windows Security",
+    "name": "An attempt was made to set the Directory Services Restore Mode administrator password.",
+    "description": "An attempt was made to set the Directory Services Restore Mode (DSRM) administrator password."
+  },
+  {
+    "id": "4797",
+    "source": "Windows Security",
+    "name": "An attempt was made to query the existence of a blank password for an account.",
+    "description": "An attempt was made to query the existence of a blank password for an account."
+  },
+  {
+    "id": "4798",
+    "source": "Windows Security",
+    "name": "A user's local group membership was enumerated.",
+    "description": "A user's local group membership was enumerated."
+  },
+  {
+    "id": "4799",
+    "source": "Windows Security",
+    "name": "A security-enabled local group membership was enumerated.",
+    "description": "A security-enabled local group membership was enumerated."
+  },
+  {
+    "id": "4800",
+    "source": "Windows Security",
+    "name": "The workstation was locked.",
+    "description": "The workstation was locked."
+  },
+  {
+    "id": "4801",
+    "source": "Windows Security",
+    "name": "The workstation was unlocked.",
+    "description": "The workstation was unlocked."
+  },
+  {
+    "id": "4802",
+    "source": "Windows Security",
+    "name": "The screen saver was invoked.",
+    "description": "The screen saver was invoked."
+  },
+  {
+    "id": "4803",
+    "source": "Windows Security",
+    "name": "The screen saver was dismissed.",
+    "description": "The screen saver was dismissed."
+  },
+  {
+    "id": "4816",
+    "source": "Windows Security",
+    "name": "RPC detected an integrity violation while decrypting an incoming message.",
+    "description": "RPC detected an integrity violation while decrypting an incoming message."
+  },
+  {
+    "id": "4817",
+    "source": "Windows Security",
+    "name": "Auditing settings on an object were changed.",
+    "description": "Auditing settings on an object were changed (Kernel Object)."
+  },
+  {
+    "id": "4818",
+    "source": "Windows Security",
+    "name": "Proposed Central Access Policy does not grant the same permissions.",
+    "description": "Proposed Central Access Policy does not grant the same access permissions as the current Central Access Policy."
+  },
+  {
+    "id": "4819",
+    "source": "Windows Security",
+    "name": "Central Access Policies on the machine have been changed.",
+    "description": "Central Access Policies on the machine have been changed."
+  },
+  {
+    "id": "4820",
+    "source": "Windows Security",
+    "name": "A Kerberos TGT was denied because the device does not meet access control restrictions.",
+    "description": "A Kerberos Ticket-granting-ticket (TGT) was denied because the device does not meet the access control restrictions."
+  },
+  {
+    "id": "4821",
+    "source": "Windows Security",
+    "name": "A Kerberos service ticket was denied because access control restrictions were not met.",
+    "description": "A Kerberos service ticket was denied because the user, device, or both does not meet the access control restrictions."
+  },
+  {
+    "id": "4822",
+    "source": "Windows Security",
+    "name": "NTLM authentication failed because the account was a member of the Protected User group.",
+    "description": "NTLM authentication failed because the account was a member of the Protected User group."
+  },
+  {
+    "id": "4823",
+    "source": "Windows Security",
+    "name": "NTLM authentication failed because access control restrictions are required.",
+    "description": "NTLM authentication failed because access control restrictions are required."
+  },
+  {
+    "id": "4824",
+    "source": "Windows Security",
+    "name": "Kerberos preauthentication using DES or RC4 failed (Protected User).",
+    "description": "Kerberos preauthentication by using DES or RC4 failed because the account was a member of the Protected User group."
+  },
+  {
+    "id": "4825",
+    "source": "Windows Security",
+    "name": "A user was denied access to Remote Desktop.",
+    "description": "A user was denied access to Remote Desktop. Network Level Authentication (NLA) failed."
+  },
+  {
+    "id": "4826",
+    "source": "Windows Security",
+    "name": "Boot Configuration Data loaded.",
+    "description": "Boot Configuration Data loaded."
+  },
+  {
+    "id": "4864",
+    "source": "Windows Security",
+    "name": "A namespace collision was detected.",
+    "description": "A namespace collision was detected."
+  },
+  {
+    "id": "4865",
+    "source": "Windows Security",
+    "name": "A trusted forest information entry was added.",
+    "description": "A trusted forest information entry was added."
+  },
+  {
+    "id": "4866",
+    "source": "Windows Security",
+    "name": "A trusted forest information entry was removed.",
+    "description": "A trusted forest information entry was removed."
+  },
+  {
+    "id": "4867",
+    "source": "Windows Security",
+    "name": "A trusted forest information entry was modified.",
+    "description": "A trusted forest information entry was modified."
+  },
+  {
+    "id": "4868",
+    "source": "Windows Security",
+    "name": "The certificate manager denied a pending certificate request.",
+    "description": "The certificate manager denied a pending certificate request."
+  },
+  {
+    "id": "4869",
+    "source": "Windows Security",
+    "name": "Certificate Services received a resubmitted certificate request.",
+    "description": "Certificate Services received a resubmitted certificate request."
+  },
+  {
+    "id": "4870",
+    "source": "Windows Security",
+    "name": "Certificate Services revoked a certificate.",
+    "description": "Certificate Services revoked a certificate."
+  },
+  {
+    "id": "4871",
+    "source": "Windows Security",
+    "name": "Certificate Services received a request to publish the CRL.",
+    "description": "Certificate Services received a request to publish the certificate revocation list (CRL)."
+  },
+  {
+    "id": "4872",
+    "source": "Windows Security",
+    "name": "Certificate Services published the CRL.",
+    "description": "Certificate Services published the certificate revocation list (CRL)."
+  },
+  {
+    "id": "4873",
+    "source": "Windows Security",
+    "name": "A certificate request extension changed.",
+    "description": "A certificate request extension changed."
+  },
+  {
+    "id": "4874",
+    "source": "Windows Security",
+    "name": "One or more certificate request attributes changed.",
+    "description": "One or more certificate request attributes changed."
+  },
+  {
+    "id": "4875",
+    "source": "Windows Security",
+    "name": "Certificate Services received a request to shut down.",
+    "description": "Certificate Services received a request to shut down."
+  },
+  {
+    "id": "4876",
+    "source": "Windows Security",
+    "name": "Certificate Services backup started.",
+    "description": "Certificate Services backup started."
+  },
+  {
+    "id": "4877",
+    "source": "Windows Security",
+    "name": "Certificate Services backup completed.",
+    "description": "Certificate Services backup completed."
+  },
+  {
+    "id": "4878",
+    "source": "Windows Security",
+    "name": "Certificate Services restore started.",
+    "description": "Certificate Services restore started."
+  },
+  {
+    "id": "4879",
+    "source": "Windows Security",
+    "name": "Certificate Services restore completed.",
+    "description": "Certificate Services restore completed."
+  },
+  {
+    "id": "4880",
+    "source": "Windows Security",
+    "name": "Certificate Services started.",
+    "description": "Certificate Services started."
+  },
+  {
+    "id": "4881",
+    "source": "Windows Security",
+    "name": "Certificate Services stopped.",
+    "description": "Certificate Services stopped."
+  },
+  {
+    "id": "4882",
+    "source": "Windows Security",
+    "name": "The security permissions for Certificate Services changed.",
+    "description": "The security permissions for Certificate Services changed."
+  },
+  {
+    "id": "4883",
+    "source": "Windows Security",
+    "name": "Certificate Services retrieved an archived key.",
+    "description": "Certificate Services retrieved an archived key."
+  },
+  {
+    "id": "4884",
+    "source": "Windows Security",
+    "name": "Certificate Services imported a certificate into its database.",
+    "description": "Certificate Services imported a certificate into its database."
+  },
+  {
+    "id": "4885",
+    "source": "Windows Security",
+    "name": "The audit filter for Certificate Services changed.",
+    "description": "The audit filter for Certificate Services changed."
+  },
+  {
+    "id": "4886",
+    "source": "Windows Security",
+    "name": "Certificate Services received a certificate request.",
+    "description": "Certificate Services received a certificate request."
+  },
+  {
+    "id": "4887",
+    "source": "Windows Security",
+    "name": "Certificate Services approved a certificate request and issued a certificate.",
+    "description": "Certificate Services approved a certificate request and issued a certificate."
+  },
+  {
+    "id": "4888",
+    "source": "Windows Security",
+    "name": "Certificate Services denied a certificate request.",
+    "description": "Certificate Services denied a certificate request."
+  },
+  {
+    "id": "4889",
+    "source": "Windows Security",
+    "name": "Certificate Services set the status of a certificate request to pending.",
+    "description": "Certificate Services set the status of a certificate request to pending."
+  },
+  {
+    "id": "4890",
+    "source": "Windows Security",
+    "name": "The certificate manager settings for Certificate Services changed.",
+    "description": "The certificate manager settings for Certificate Services changed."
+  },
+  {
+    "id": "4891",
+    "source": "Windows Security",
+    "name": "A configuration entry changed in Certificate Services.",
+    "description": "A configuration entry changed in Certificate Services."
+  },
+  {
+    "id": "4892",
+    "source": "Windows Security",
+    "name": "A property of Certificate Services changed.",
+    "description": "A property of Certificate Services changed."
+  },
+  {
+    "id": "4893",
+    "source": "Windows Security",
+    "name": "Certificate Services archived a key.",
+    "description": "Certificate Services archived a key."
+  },
+  {
+    "id": "4894",
+    "source": "Windows Security",
+    "name": "Certificate Services imported and archived a key.",
+    "description": "Certificate Services imported and archived a key."
+  },
+  {
+    "id": "4895",
+    "source": "Windows Security",
+    "name": "Certificate Services published the CA certificate to Active Directory.",
+    "description": "Certificate Services published the CA certificate to Active Directory Domain Services."
+  },
+  {
+    "id": "4896",
+    "source": "Windows Security",
+    "name": "One or more rows have been deleted from the certificate database.",
+    "description": "One or more rows have been deleted from the certificate database."
+  },
+  {
+    "id": "4897",
+    "source": "Windows Security",
+    "name": "Role separation enabled.",
+    "description": "Role separation enabled: Certificate Services."
+  },
+  {
+    "id": "4898",
+    "source": "Windows Security",
+    "name": "Certificate Services loaded a template.",
+    "description": "Certificate Services loaded a template."
+  },
+  {
+    "id": "4899",
+    "source": "Windows Security",
+    "name": "A Certificate Services template was updated.",
+    "description": "A Certificate Services template was updated."
+  },
+  {
+    "id": "4900",
+    "source": "Windows Security",
+    "name": "Certificate Services template security was updated.",
+    "description": "Certificate Services template security was updated."
+  },
+  {
+    "id": "4902",
+    "source": "Windows Security",
+    "name": "The Per-user audit policy table was created.",
+    "description": "The Per-user audit policy table was created."
+  },
+  {
+    "id": "4904",
+    "source": "Windows Security",
+    "name": "An attempt was made to register a security event source.",
+    "description": "An attempt was made to register a security event source."
+  },
+  {
+    "id": "4905",
+    "source": "Windows Security",
+    "name": "An attempt was made to unregister a security event source.",
+    "description": "An attempt was made to unregister a security event source."
+  },
+  {
+    "id": "4906",
+    "source": "Windows Security",
+    "name": "The CrashOnAuditFail value has changed.",
+    "description": "The CrashOnAuditFail value has changed."
+  },
+  {
+    "id": "4907",
+    "source": "Windows Security",
+    "name": "Auditing settings on object were changed.",
+    "description": "Auditing settings on object were changed."
+  },
+  {
+    "id": "4908",
+    "source": "Windows Security",
+    "name": "Special Groups Logon table modified.",
+    "description": "Special Groups Logon table modified."
+  },
+  {
+    "id": "4909",
+    "source": "Windows Security",
+    "name": "The local policy settings for the TBS were changed.",
+    "description": "The local policy settings for the Trusted Platform Module Base Services (TBS) were changed."
+  },
+  {
+    "id": "4910",
+    "source": "Windows Security",
+    "name": "The group policy settings for the TBS were changed.",
+    "description": "The group policy settings for the Trusted Platform Module Base Services (TBS) were changed."
+  },
+  {
+    "id": "4911",
+    "source": "Windows Security",
+    "name": "Resource attributes of the object were changed.",
+    "description": "Resource attributes of the object were changed."
+  },
+  {
+    "id": "4912",
+    "source": "Windows Security",
+    "name": "Per User Audit Policy was changed.",
+    "description": "Per User Audit Policy was changed."
+  },
+  {
+    "id": "4913",
+    "source": "Windows Security",
+    "name": "Central Access Policy on the object was changed.",
+    "description": "Central Access Policy on the object was changed."
+  },
+  {
+    "id": "4928",
+    "source": "Windows Security",
+    "name": "An Active Directory replica source naming context was established.",
+    "description": "An Active Directory replica source naming context was established."
+  },
+  {
+    "id": "4929",
+    "source": "Windows Security",
+    "name": "An Active Directory replica source naming context was removed.",
+    "description": "An Active Directory replica source naming context was removed."
+  },
+  {
+    "id": "4930",
+    "source": "Windows Security",
+    "name": "An Active Directory replica source naming context was modified.",
+    "description": "An Active Directory replica source naming context was modified."
+  },
+  {
+    "id": "4931",
+    "source": "Windows Security",
+    "name": "An Active Directory replica destination naming context was modified.",
+    "description": "An Active Directory replica destination naming context was modified."
+  },
+  {
+    "id": "4932",
+    "source": "Windows Security",
+    "name": "Synchronization of a replica of an Active Directory naming context has begun.",
+    "description": "Synchronization of a replica of an Active Directory naming context has begun."
+  },
+  {
+    "id": "4933",
+    "source": "Windows Security",
+    "name": "Synchronization of a replica of an Active Directory naming context has ended.",
+    "description": "Synchronization of a replica of an Active Directory naming context has ended."
+  },
+  {
+    "id": "4934",
+    "source": "Windows Security",
+    "name": "Attributes of an Active Directory object were replicated.",
+    "description": "Attributes of an Active Directory object were replicated."
+  },
+  {
+    "id": "4935",
+    "source": "Windows Security",
+    "name": "Replication failure begins.",
+    "description": "Replication failure begins."
+  },
+  {
+    "id": "4936",
+    "source": "Windows Security",
+    "name": "Replication failure ends.",
+    "description": "Replication failure ends."
+  },
+  {
+    "id": "4937",
+    "source": "Windows Security",
+    "name": "A lingering object was removed from a replica.",
+    "description": "A lingering object was removed from a replica."
+  },
+  {
+    "id": "4944",
+    "source": "Windows Security",
+    "name": "Windows Firewall policy was active when service started.",
+    "description": "The following policy was active when the Windows Firewall started."
+  },
+  {
+    "id": "4945",
+    "source": "Windows Security",
+    "name": "A rule was listed when the Windows Firewall started.",
+    "description": "A rule was listed when the Windows Firewall started."
+  },
+  {
+    "id": "4946",
+    "source": "Windows Security",
+    "name": "A Windows Firewall exception list rule was added.",
+    "description": "A change has been made to Windows Firewall exception list. A rule was added."
+  },
+  {
+    "id": "4947",
+    "source": "Windows Security",
+    "name": "A Windows Firewall exception list rule was modified.",
+    "description": "A change has been made to Windows Firewall exception list. A rule was modified."
+  },
+  {
+    "id": "4948",
+    "source": "Windows Security",
+    "name": "A Windows Firewall exception list rule was deleted.",
+    "description": "A change has been made to Windows Firewall exception list. A rule was deleted."
+  },
+  {
+    "id": "4949",
+    "source": "Windows Security",
+    "name": "Windows Firewall settings were restored to default values.",
+    "description": "Windows Firewall settings were restored to the default values."
+  },
+  {
+    "id": "4950",
+    "source": "Windows Security",
+    "name": "A Windows Firewall setting has changed.",
+    "description": "A Windows Firewall setting has changed."
+  },
+  {
+    "id": "4951",
+    "source": "Windows Security",
+    "name": "A rule has been ignored (version mismatch).",
+    "description": "A rule has been ignored because its major version number was not recognized by Windows Firewall."
+  },
+  {
+    "id": "4952",
+    "source": "Windows Security",
+    "name": "Parts of a rule have been ignored (version mismatch).",
+    "description": "Parts of a rule have been ignored because its minor version number was not recognized by Windows Firewall. The other parts of the rule will be enforced."
+  },
+  {
+    "id": "4953",
+    "source": "Windows Security",
+    "name": "A rule has been ignored (parse error).",
+    "description": "A rule has been ignored by Windows Firewall because it could not parse the rule."
+  },
+  {
+    "id": "4954",
+    "source": "Windows Security",
+    "name": "Windows Firewall Group Policy settings have changed.",
+    "description": "Windows Firewall Group Policy settings have changed. The new settings have been applied."
+  },
+  {
+    "id": "4956",
+    "source": "Windows Security",
+    "name": "Windows Firewall has changed the active profile.",
+    "description": "Windows Firewall has changed the active profile."
+  },
+  {
+    "id": "4957",
+    "source": "Windows Security",
+    "name": "Windows Firewall did not apply a rule.",
+    "description": "Windows Firewall did not apply the following rule."
+  },
+  {
+    "id": "4958",
+    "source": "Windows Security",
+    "name": "Windows Firewall did not apply a rule (missing items).",
+    "description": "Windows Firewall did not apply the following rule because the rule referred to items not configured on this computer."
+  },
+  {
+    "id": "4960",
+    "source": "Windows Security",
+    "name": "IPsec dropped an inbound packet that failed an integrity check.",
+    "description": "IPsec dropped an inbound packet that failed an integrity check."
+  },
+  {
+    "id": "4961",
+    "source": "Windows Security",
+    "name": "IPsec dropped an inbound packet that failed a replay check.",
+    "description": "IPsec dropped an inbound packet that failed a replay check."
+  },
+  {
+    "id": "4962",
+    "source": "Windows Security",
+    "name": "IPsec dropped an inbound packet that failed a replay check (low sequence number).",
+    "description": "IPsec dropped an inbound packet that failed a replay check. The inbound packet had too low a sequence number to ensure it was not a replay."
+  },
+  {
+    "id": "4963",
+    "source": "Windows Security",
+    "name": "IPsec dropped an inbound clear text packet that should have been secured.",
+    "description": "IPsec dropped an inbound clear text packet that should have been secured."
+  },
+  {
+    "id": "4964",
+    "source": "Windows Security",
+    "name": "Special groups have been assigned to a new logon.",
+    "description": "Special groups have been assigned to a new logon."
+  },
+  {
+    "id": "4965",
+    "source": "Windows Security",
+    "name": "IPsec received a packet from a remote computer with an incorrect SPI.",
+    "description": "IPsec received a packet from a remote computer with an incorrect Security Parameter Index (SPI)."
+  },
+  {
+    "id": "4976",
+    "source": "Windows Security",
+    "name": "IPsec received an invalid Main Mode negotiation packet.",
+    "description": "During Main Mode negotiation, IPsec received an invalid negotiation packet."
+  },
+  {
+    "id": "4977",
+    "source": "Windows Security",
+    "name": "IPsec received an invalid Quick Mode negotiation packet.",
+    "description": "During Quick Mode negotiation, IPsec received an invalid negotiation packet."
+  },
+  {
+    "id": "4978",
+    "source": "Windows Security",
+    "name": "IPsec received an invalid Extended Mode negotiation packet.",
+    "description": "During Extended Mode negotiation, IPsec received an invalid negotiation packet."
+  },
+  {
+    "id": "4979",
+    "source": "Windows Security",
+    "name": "IPsec Main Mode and Extended Mode SAs were established (User).",
+    "description": "IPsec Main Mode and Extended Mode security associations were established (User mode)."
+  },
+  {
+    "id": "4980",
+    "source": "Windows Security",
+    "name": "IPsec Main Mode and Extended Mode SAs were established (Computer).",
+    "description": "IPsec Main Mode and Extended Mode security associations were established (Computer mode)."
+  },
+  {
+    "id": "4981",
+    "source": "Windows Security",
+    "name": "IPsec Main Mode and Extended Mode SAs were established (Anonymous).",
+    "description": "IPsec Main Mode and Extended Mode security associations were established (Anonymous)."
+  },
+  {
+    "id": "4982",
+    "source": "Windows Security",
+    "name": "IPsec Main Mode and Extended Mode SAs were established (No Impersonation).",
+    "description": "IPsec Main Mode and Extended Mode security associations were established (No Impersonation)."
+  },
+  {
+    "id": "4983",
+    "source": "Windows Security",
+    "name": "An IPsec Extended Mode negotiation failed (User).",
+    "description": "An IPsec Extended Mode negotiation failed (User mode)."
+  },
+  {
+    "id": "4984",
+    "source": "Windows Security",
+    "name": "An IPsec Extended Mode negotiation failed (Computer).",
+    "description": "An IPsec Extended Mode negotiation failed (Computer mode)."
+  },
+  {
+    "id": "4985",
+    "source": "Windows Security",
+    "name": "The state of a transaction has changed.",
+    "description": "The state of a transaction has changed."
+  },
+  {
+    "id": "5024",
+    "source": "Windows Security",
+    "name": "The Windows Firewall Service has started successfully.",
+    "description": "The Windows Firewall Service has started successfully."
+  },
+  {
+    "id": "5025",
+    "source": "Windows Security",
+    "name": "The Windows Firewall Service has been stopped.",
+    "description": "The Windows Firewall Service has been stopped."
+  },
+  {
+    "id": "5027",
+    "source": "Windows Security",
+    "name": "The Windows Firewall Service was unable to retrieve the security policy from local storage.",
+    "description": "The Windows Firewall Service was unable to retrieve the security policy from the local storage. The service will continue enforcing the current policy."
+  },
+  {
+    "id": "5028",
+    "source": "Windows Security",
+    "name": "The Windows Firewall Service was unable to parse the new security policy.",
+    "description": "The Windows Firewall Service was unable to parse the new security policy. The service will continue with currently enforced policy."
+  },
+  {
+    "id": "5029",
+    "source": "Windows Security",
+    "name": "The Windows Firewall Service failed to initialize the driver.",
+    "description": "The Windows Firewall Service failed to initialize the driver. The service will continue to enforce the current policy."
+  },
+  {
+    "id": "5030",
+    "source": "Windows Security",
+    "name": "The Windows Firewall Service failed to start.",
+    "description": "The Windows Firewall Service failed to start."
+  },
+  {
+    "id": "5031",
+    "source": "Windows Security",
+    "name": "Windows Firewall blocked an application from accepting incoming connections.",
+    "description": "The Windows Firewall Service blocked an application from accepting incoming connections on the network."
+  },
+  {
+    "id": "5032",
+    "source": "Windows Security",
+    "name": "Windows Firewall was unable to notify the user that it blocked an application.",
+    "description": "Windows Firewall was unable to notify the user that it blocked an application from accepting incoming connections on the network."
+  },
+  {
+    "id": "5033",
+    "source": "Windows Security",
+    "name": "The Windows Firewall Driver has started successfully.",
+    "description": "The Windows Firewall Driver has started successfully."
+  },
+  {
+    "id": "5034",
+    "source": "Windows Security",
+    "name": "The Windows Firewall Driver has been stopped.",
+    "description": "The Windows Firewall Driver has been stopped."
+  },
+  {
+    "id": "5035",
+    "source": "Windows Security",
+    "name": "The Windows Firewall Driver failed to start.",
+    "description": "The Windows Firewall Driver failed to start."
+  },
+  {
+    "id": "5037",
+    "source": "Windows Security",
+    "name": "The Windows Firewall Driver detected critical runtime error.",
+    "description": "The Windows Firewall Driver detected critical runtime error. Terminating."
+  },
+  {
+    "id": "5038",
+    "source": "Windows Security",
+    "name": "Code integrity determined that the image hash of a file is not valid.",
+    "description": "Code integrity determined that the image hash of a file is not valid. The file could be corrupt due to unauthorized modification or the invalid hash could indicate a potential disk device error."
+  },
+  {
+    "id": "5039",
+    "source": "Windows Security",
+    "name": "A registry key was virtualized.",
+    "description": "A registry key was virtualized."
+  },
+  {
+    "id": "5040",
+    "source": "Windows Security",
+    "name": "An IPsec Authentication Set was added.",
+    "description": "A change has been made to IPsec settings. An Authentication Set was added."
+  },
+  {
+    "id": "5041",
+    "source": "Windows Security",
+    "name": "An IPsec Authentication Set was modified.",
+    "description": "A change has been made to IPsec settings. An Authentication Set was modified."
+  },
+  {
+    "id": "5042",
+    "source": "Windows Security",
+    "name": "An IPsec Authentication Set was deleted.",
+    "description": "A change has been made to IPsec settings. An Authentication Set was deleted."
+  },
+  {
+    "id": "5043",
+    "source": "Windows Security",
+    "name": "An IPsec Connection Security Rule was added.",
+    "description": "A change has been made to IPsec settings. A Connection Security Rule was added."
+  },
+  {
+    "id": "5044",
+    "source": "Windows Security",
+    "name": "An IPsec Connection Security Rule was modified.",
+    "description": "A change has been made to IPsec settings. A Connection Security Rule was modified."
+  },
+  {
+    "id": "5045",
+    "source": "Windows Security",
+    "name": "An IPsec Connection Security Rule was deleted.",
+    "description": "A change has been made to IPsec settings. A Connection Security Rule was deleted."
+  },
+  {
+    "id": "5046",
+    "source": "Windows Security",
+    "name": "An IPsec Crypto Set was added.",
+    "description": "A change has been made to IPsec settings. A Crypto Set was added."
+  },
+  {
+    "id": "5047",
+    "source": "Windows Security",
+    "name": "An IPsec Crypto Set was modified.",
+    "description": "A change has been made to IPsec settings. A Crypto Set was modified."
+  },
+  {
+    "id": "5048",
+    "source": "Windows Security",
+    "name": "An IPsec Crypto Set was deleted.",
+    "description": "A change has been made to IPsec settings. A Crypto Set was deleted."
+  },
+  {
+    "id": "5049",
+    "source": "Windows Security",
+    "name": "An IPsec Security Association was deleted.",
+    "description": "An IPsec Security Association was deleted."
+  },
+  {
+    "id": "5051",
+    "source": "Windows Security",
+    "name": "A file was virtualized.",
+    "description": "A file was virtualized."
+  },
+  {
+    "id": "5056",
+    "source": "Windows Security",
+    "name": "A cryptographic self-test was performed.",
+    "description": "A cryptographic self-test was performed."
+  },
+  {
+    "id": "5057",
+    "source": "Windows Security",
+    "name": "A cryptographic primitive operation failed.",
+    "description": "A cryptographic primitive operation failed."
+  },
+  {
+    "id": "5058",
+    "source": "Windows Security",
+    "name": "Key file operation.",
+    "description": "Key file operation."
+  },
+  {
+    "id": "5059",
+    "source": "Windows Security",
+    "name": "Key migration operation.",
+    "description": "Key migration operation."
+  },
+  {
+    "id": "5060",
+    "source": "Windows Security",
+    "name": "Verification operation failed.",
+    "description": "Verification operation failed."
+  },
+  {
+    "id": "5061",
+    "source": "Windows Security",
+    "name": "Cryptographic operation.",
+    "description": "Cryptographic operation."
+  },
+  {
+    "id": "5062",
+    "source": "Windows Security",
+    "name": "A kernel-mode cryptographic self-test was performed.",
+    "description": "A kernel-mode cryptographic self-test was performed."
+  },
+  {
+    "id": "5063",
+    "source": "Windows Security",
+    "name": "A cryptographic provider operation was attempted.",
+    "description": "A cryptographic provider operation was attempted."
+  },
+  {
+    "id": "5064",
+    "source": "Windows Security",
+    "name": "A cryptographic context operation was attempted.",
+    "description": "A cryptographic context operation was attempted."
+  },
+  {
+    "id": "5065",
+    "source": "Windows Security",
+    "name": "A cryptographic context modification was attempted.",
+    "description": "A cryptographic context modification was attempted."
+  },
+  {
+    "id": "5066",
+    "source": "Windows Security",
+    "name": "A cryptographic function operation was attempted.",
+    "description": "A cryptographic function operation was attempted."
+  },
+  {
+    "id": "5067",
+    "source": "Windows Security",
+    "name": "A cryptographic function modification was attempted.",
+    "description": "A cryptographic function modification was attempted."
+  },
+  {
+    "id": "5068",
+    "source": "Windows Security",
+    "name": "A cryptographic function provider operation was attempted.",
+    "description": "A cryptographic function provider operation was attempted."
+  },
+  {
+    "id": "5069",
+    "source": "Windows Security",
+    "name": "A cryptographic function property operation was attempted.",
+    "description": "A cryptographic function property operation was attempted."
+  },
+  {
+    "id": "5070",
+    "source": "Windows Security",
+    "name": "A cryptographic function property modification was attempted.",
+    "description": "A cryptographic function property modification was attempted."
+  },
+  {
+    "id": "5071",
+    "source": "Windows Security",
+    "name": "Key access denied by Microsoft key distribution service.",
+    "description": "Key access denied by Microsoft key distribution service."
+  },
+  {
+    "id": "5120",
+    "source": "Windows Security",
+    "name": "OCSP Responder Service Started.",
+    "description": "OCSP Responder Service Started."
+  },
+  {
+    "id": "5121",
+    "source": "Windows Security",
+    "name": "OCSP Responder Service Stopped.",
+    "description": "OCSP Responder Service Stopped."
+  },
+  {
+    "id": "5122",
+    "source": "Windows Security",
+    "name": "A Configuration entry changed in the OCSP Responder Service.",
+    "description": "A Configuration entry changed in the OCSP Responder Service."
+  },
+  {
+    "id": "5123",
+    "source": "Windows Security",
+    "name": "A configuration entry changed in the OCSP Responder Service.",
+    "description": "A configuration entry changed in the OCSP Responder Service."
+  },
+  {
+    "id": "5124",
+    "source": "Windows Security",
+    "name": "A security setting was updated on OCSP Responder Service.",
+    "description": "A security setting was updated on OCSP Responder Service."
+  },
+  {
+    "id": "5125",
+    "source": "Windows Security",
+    "name": "A request was submitted to OCSP Responder Service.",
+    "description": "A request was submitted to OCSP Responder Service."
+  },
+  {
+    "id": "5126",
+    "source": "Windows Security",
+    "name": "Signing Certificate was automatically updated by the OCSP Responder Service.",
+    "description": "Signing Certificate was automatically updated by the OCSP Responder Service."
+  },
+  {
+    "id": "5127",
+    "source": "Windows Security",
+    "name": "The OCSP Revocation Provider successfully updated the revocation information.",
+    "description": "The OCSP Revocation Provider successfully updated the revocation information."
+  },
+  {
+    "id": "5136",
+    "source": "Windows Security",
+    "name": "A directory service object was modified.",
+    "description": "A directory service object was modified."
+  },
+  {
+    "id": "5137",
+    "source": "Windows Security",
+    "name": "A directory service object was created.",
+    "description": "A directory service object was created."
+  },
+  {
+    "id": "5138",
+    "source": "Windows Security",
+    "name": "A directory service object was undeleted.",
+    "description": "A directory service object was undeleted."
+  },
+  {
+    "id": "5139",
+    "source": "Windows Security",
+    "name": "A directory service object was moved.",
+    "description": "A directory service object was moved."
+  },
+  {
+    "id": "5140",
+    "source": "Windows Security",
+    "name": "A network share object was accessed.",
+    "description": "A network share object was accessed."
+  },
+  {
+    "id": "5141",
+    "source": "Windows Security",
+    "name": "A directory service object was deleted.",
+    "description": "A directory service object was deleted."
+  },
+  {
+    "id": "5142",
+    "source": "Windows Security",
+    "name": "A network share object was added.",
+    "description": "A network share object was added."
+  },
+  {
+    "id": "5143",
+    "source": "Windows Security",
+    "name": "A network share object was modified.",
+    "description": "A network share object was modified."
+  },
+  {
+    "id": "5144",
+    "source": "Windows Security",
+    "name": "A network share object was deleted.",
+    "description": "A network share object was deleted."
+  },
+  {
+    "id": "5145",
+    "source": "Windows Security",
+    "name": "A network share object access check.",
+    "description": "A network share object was checked to see whether the client can be granted desired access."
+  },
+  {
+    "id": "5150",
+    "source": "Windows Security",
+    "name": "The Windows Filtering Platform has blocked a packet.",
+    "description": "The Windows Filtering Platform has blocked a packet."
+  },
+  {
+    "id": "5151",
+    "source": "Windows Security",
+    "name": "A more restrictive Windows Filtering Platform filter has blocked a packet.",
+    "description": "A more restrictive Windows Filtering Platform filter has blocked a packet."
+  },
+  {
+    "id": "5152",
+    "source": "Windows Security",
+    "name": "The Windows Filtering Platform blocked a packet.",
+    "description": "The Windows Filtering Platform blocked a packet."
+  },
+  {
+    "id": "5153",
+    "source": "Windows Security",
+    "name": "A more restrictive Windows Filtering Platform filter has blocked a packet.",
+    "description": "A more restrictive Windows Filtering Platform filter has blocked a packet."
+  },
+  {
+    "id": "5154",
+    "source": "Windows Security",
+    "name": "The Windows Filtering Platform has permitted an application to listen on a port.",
+    "description": "The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections."
+  },
+  {
+    "id": "5155",
+    "source": "Windows Security",
+    "name": "The Windows Filtering Platform has blocked an application from listening on a port.",
+    "description": "The Windows Filtering Platform has blocked an application or service from listening on a port for incoming connections."
+  },
+  {
+    "id": "5156",
+    "source": "Windows Security",
+    "name": "The Windows Filtering Platform has allowed a connection.",
+    "description": "The Windows Filtering Platform has allowed a connection."
+  },
+  {
+    "id": "5157",
+    "source": "Windows Security",
+    "name": "The Windows Filtering Platform has blocked a connection.",
+    "description": "The Windows Filtering Platform has blocked a connection."
+  },
+  {
+    "id": "5158",
+    "source": "Windows Security",
+    "name": "The Windows Filtering Platform has permitted a bind to a local port.",
+    "description": "The Windows Filtering Platform has permitted a bind to a local port."
+  },
+  {
+    "id": "5159",
+    "source": "Windows Security",
+    "name": "The Windows Filtering Platform has blocked a bind to a local port.",
+    "description": "The Windows Filtering Platform has blocked a bind to a local port."
+  },
+  {
+    "id": "5168",
+    "source": "Windows Security",
+    "name": "SPN check for SMB/SMB2 failed.",
+    "description": "SPN check for SMB/SMB2 failed."
+  },
+  {
+    "id": "5169",
+    "source": "Windows Security",
+    "name": "A directory service object was modified (Win10+).",
+    "description": "A directory service object was modified (alternate ID for 5136 on newer systems)."
+  },
+  {
+    "id": "5376",
+    "source": "Windows Security",
+    "name": "Credential Manager credentials were backed up.",
+    "description": "Credential Manager credentials were backed up."
+  },
+  {
+    "id": "5377",
+    "source": "Windows Security",
+    "name": "Credential Manager credentials were restored from a backup.",
+    "description": "Credential Manager credentials were restored from a backup."
+  },
+  {
+    "id": "5378",
+    "source": "Windows Security",
+    "name": "The requested credentials delegation was disallowed by policy.",
+    "description": "The requested credentials delegation was disallowed by policy."
+  },
+  {
+    "id": "5440",
+    "source": "Windows Security",
+    "name": "A WFP callout was present at boot.",
+    "description": "The following callout was present when the Windows Filtering Platform Base Filtering Engine started."
+  },
+  {
+    "id": "5441",
+    "source": "Windows Security",
+    "name": "A WFP filter was present at boot.",
+    "description": "The following filter was present when the Windows Filtering Platform Base Filtering Engine started."
+  },
+  {
+    "id": "5442",
+    "source": "Windows Security",
+    "name": "A WFP provider was present at boot.",
+    "description": "The following provider was present when the Windows Filtering Platform Base Filtering Engine started."
+  },
+  {
+    "id": "5443",
+    "source": "Windows Security",
+    "name": "A WFP provider context was present at boot.",
+    "description": "The following provider context was present when the Windows Filtering Platform Base Filtering Engine started."
+  },
+  {
+    "id": "5444",
+    "source": "Windows Security",
+    "name": "A WFP sub-layer was present at boot.",
+    "description": "The following sub-layer was present when the Windows Filtering Platform Base Filtering Engine started."
+  },
+  {
+    "id": "5446",
+    "source": "Windows Security",
+    "name": "A Windows Filtering Platform callout has been changed.",
+    "description": "A Windows Filtering Platform callout has been changed."
+  },
+  {
+    "id": "5447",
+    "source": "Windows Security",
+    "name": "A Windows Filtering Platform filter has been changed.",
+    "description": "A Windows Filtering Platform filter has been changed."
+  },
+  {
+    "id": "5448",
+    "source": "Windows Security",
+    "name": "A Windows Filtering Platform provider has been changed.",
+    "description": "A Windows Filtering Platform provider has been changed."
+  },
+  {
+    "id": "5449",
+    "source": "Windows Security",
+    "name": "A Windows Filtering Platform provider context has been changed.",
+    "description": "A Windows Filtering Platform provider context has been changed."
+  },
+  {
+    "id": "5450",
+    "source": "Windows Security",
+    "name": "A Windows Filtering Platform sub-layer has been changed.",
+    "description": "A Windows Filtering Platform sub-layer has been changed."
+  },
+  {
+    "id": "5451",
+    "source": "Windows Security",
+    "name": "An IPsec Quick Mode security association was established.",
+    "description": "An IPsec Quick Mode security association was established."
+  },
+  {
+    "id": "5452",
+    "source": "Windows Security",
+    "name": "An IPsec Quick Mode security association ended.",
+    "description": "An IPsec Quick Mode security association ended."
+  },
+  {
+    "id": "5453",
+    "source": "Windows Security",
+    "name": "An IPsec negotiation failed because IKEEXT service stopped.",
+    "description": "An IPsec negotiation with a remote computer failed because the IKE and AuthIP IPsec Keying Modules (IKEEXT) service is not started."
+  },
+  {
+    "id": "5456",
+    "source": "Windows Security",
+    "name": "PAStore Engine applied Active Directory storage IPsec policy.",
+    "description": "PAStore Engine applied Active Directory storage IPsec policy on the computer."
+  },
+  {
+    "id": "5457",
+    "source": "Windows Security",
+    "name": "PAStore Engine failed to apply Active Directory storage IPsec policy.",
+    "description": "PAStore Engine failed to apply Active Directory storage IPsec policy on the computer."
+  },
+  {
+    "id": "5458",
+    "source": "Windows Security",
+    "name": "PAStore Engine applied locally cached copy of AD IPsec policy.",
+    "description": "PAStore Engine applied locally cached copy of Active Directory storage IPsec policy on the computer."
+  },
+  {
+    "id": "5459",
+    "source": "Windows Security",
+    "name": "PAStore Engine failed to apply locally cached copy of AD IPsec policy.",
+    "description": "PAStore Engine failed to apply locally cached copy of Active Directory storage IPsec policy on the computer."
+  },
+  {
+    "id": "5460",
+    "source": "Windows Security",
+    "name": "PAStore Engine applied local registry storage IPsec policy.",
+    "description": "PAStore Engine applied local registry storage IPsec policy on the computer."
+  },
+  {
+    "id": "5461",
+    "source": "Windows Security",
+    "name": "PAStore Engine failed to apply local registry storage IPsec policy.",
+    "description": "PAStore Engine failed to apply local registry storage IPsec policy on the computer."
+  },
+  {
+    "id": "5462",
+    "source": "Windows Security",
+    "name": "PAStore Engine failed to apply some rules of the active IPsec policy.",
+    "description": "PAStore Engine failed to apply some rules of the active IPsec policy on the computer."
+  },
+  {
+    "id": "5463",
+    "source": "Windows Security",
+    "name": "PAStore Engine polled for changes to the active IPsec policy and detected no changes.",
+    "description": "PAStore Engine polled for changes to the active IPsec policy and detected no changes."
+  },
+  {
+    "id": "5464",
+    "source": "Windows Security",
+    "name": "PAStore Engine polled for changes and applied them.",
+    "description": "PAStore Engine polled for changes to the active IPsec policy, detected changes, and applied them to IPsec Services."
+  },
+  {
+    "id": "5465",
+    "source": "Windows Security",
+    "name": "PAStore Engine received forced reload control.",
+    "description": "PAStore Engine received a control for forced reloading of IPsec policy and processed the control successfully."
+  },
+  {
+    "id": "5466",
+    "source": "Windows Security",
+    "name": "PAStore Engine polled, AD unreachable, used cache.",
+    "description": "PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory cannot be reached, and will use the cached copy of the Active Directory IPsec policy instead."
+  },
+  {
+    "id": "5467",
+    "source": "Windows Security",
+    "name": "PAStore Engine polled, AD reachable, no changes.",
+    "description": "PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory can be reached, and found no changes to the policy."
+  },
+  {
+    "id": "5468",
+    "source": "Windows Security",
+    "name": "PAStore Engine polled, AD reachable, applied changes.",
+    "description": "PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory can be reached, found changes to the policy, and applied those changes."
+  },
+  {
+    "id": "5471",
+    "source": "Windows Security",
+    "name": "PAStore Engine loaded local storage IPsec policy.",
+    "description": "PAStore Engine loaded local storage IPsec policy on the computer."
+  },
+  {
+    "id": "5472",
+    "source": "Windows Security",
+    "name": "PAStore Engine failed to load local storage IPsec policy.",
+    "description": "PAStore Engine failed to load local storage IPsec policy on the computer."
+  },
+  {
+    "id": "5473",
+    "source": "Windows Security",
+    "name": "PAStore Engine loaded directory storage IPsec policy.",
+    "description": "PAStore Engine loaded directory storage IPsec policy on the computer."
+  },
+  {
+    "id": "5474",
+    "source": "Windows Security",
+    "name": "PAStore Engine failed to load directory storage IPsec policy.",
+    "description": "PAStore Engine failed to load directory storage IPsec policy on the computer."
+  },
+  {
+    "id": "5477",
+    "source": "Windows Security",
+    "name": "PAStore Engine failed to add quick mode filter.",
+    "description": "PAStore Engine failed to add quick mode filter."
+  },
+  {
+    "id": "5478",
+    "source": "Windows Security",
+    "name": "IPsec Services has started successfully.",
+    "description": "IPsec Services has started successfully."
+  },
+  {
+    "id": "5479",
+    "source": "Windows Security",
+    "name": "IPsec Services has been shut down successfully.",
+    "description": "IPsec Services has been shut down successfully."
+  },
+  {
+    "id": "5480",
+    "source": "Windows Security",
+    "name": "IPsec Services failed to get the complete list of network interfaces.",
+    "description": "IPsec Services failed to get the complete list of network interfaces on the computer."
+  },
+  {
+    "id": "5483",
+    "source": "Windows Security",
+    "name": "IPsec Services failed to initialize RPC server.",
+    "description": "IPsec Services failed to initialize RPC server. IPsec Services could not be started."
+  },
+  {
+    "id": "5484",
+    "source": "Windows Security",
+    "name": "IPsec Services has experienced a critical failure and has been shut down.",
+    "description": "IPsec Services has experienced a critical failure and has been shut down."
+  },
+  {
+    "id": "5485",
+    "source": "Windows Security",
+    "name": "IPsec Services failed to process some IPsec filters on a plug-and-play event.",
+    "description": "IPsec Services failed to process some IPsec filters on a plug-and-play event for network interfaces."
+  },
+  {
+    "id": "5632",
+    "source": "Windows Security",
+    "name": "A request was made to authenticate to a wireless network.",
+    "description": "A request was made to authenticate to a wireless network."
+  },
+  {
+    "id": "5633",
+    "source": "Windows Security",
+    "name": "A request was made to authenticate to a wired network.",
+    "description": "A request was made to authenticate to a wired network."
+  },
+  {
+    "id": "5712",
+    "source": "Windows Security",
+    "name": "A Remote Procedure Call (RPC) was attempted.",
+    "description": "A Remote Procedure Call (RPC) was attempted."
+  },
+  {
+    "id": "5888",
+    "source": "Windows Security",
+    "name": "An object in the COM+ Catalog was modified.",
+    "description": "An object in the COM+ Catalog was modified."
+  },
+  {
+    "id": "5889",
+    "source": "Windows Security",
+    "name": "An object was deleted from the COM+ Catalog.",
+    "description": "An object was deleted from the COM+ Catalog."
+  },
+  {
+    "id": "5890",
+    "source": "Windows Security",
+    "name": "An object was added to the COM+ Catalog.",
+    "description": "An object was added to the COM+ Catalog."
+  },
+  {
+    "id": "6144",
+    "source": "Windows Security",
+    "name": "Security policy in the group policy objects has been applied successfully.",
+    "description": "Security policy in the group policy objects has been applied successfully."
+  },
+  {
+    "id": "6145",
+    "source": "Windows Security",
+    "name": "One or more errors occurred while processing security policy in the group policy objects.",
+    "description": "One or more errors occurred while processing security policy in the group policy objects."
+  },
+  {
+    "id": "6272",
+    "source": "Windows Security",
+    "name": "Network Policy Server granted access to a user.",
+    "description": "Network Policy Server granted access to a user."
+  },
+  {
+    "id": "6273",
+    "source": "Windows Security",
+    "name": "Network Policy Server denied access to a user.",
+    "description": "Network Policy Server denied access to a user."
+  },
+  {
+    "id": "6274",
+    "source": "Windows Security",
+    "name": "Network Policy Server discarded the request for a user.",
+    "description": "Network Policy Server discarded the request for a user."
+  },
+  {
+    "id": "6275",
+    "source": "Windows Security",
+    "name": "Network Policy Server discarded the accounting request for a user.",
+    "description": "Network Policy Server discarded the accounting request for a user."
+  },
+  {
+    "id": "6276",
+    "source": "Windows Security",
+    "name": "Network Policy Server quarantined a user.",
+    "description": "Network Policy Server quarantined a user."
+  },
+  {
+    "id": "6277",
+    "source": "Windows Security",
+    "name": "Network Policy Server granted probation access to a user.",
+    "description": "Network Policy Server granted access to a user but put it on probation because the host did not meet the defined health policy."
+  },
+  {
+    "id": "6278",
+    "source": "Windows Security",
+    "name": "Network Policy Server granted full access to a user.",
+    "description": "Network Policy Server granted full access to a user because the host met the defined health policy."
+  },
+  {
+    "id": "6279",
+    "source": "Windows Security",
+    "name": "Network Policy Server locked the user account.",
+    "description": "Network Policy Server locked the user account due to repeated failed authentication attempts."
+  },
+  {
+    "id": "6280",
+    "source": "Windows Security",
+    "name": "Network Policy Server unlocked the user account.",
+    "description": "Network Policy Server unlocked the user account."
+  },
+  {
+    "id": "6281",
+    "source": "Windows Security",
+    "name": "Code Integrity determined that the page hashes of an image file are not valid.",
+    "description": "Code Integrity determined that the page hashes of an image file are not valid. The file could be improperly signed without page hashes or corrupt due to unauthorized modification."
+  },
+  {
+    "id": "6400",
+    "source": "Windows Security",
+    "name": "BranchCache: Received an incorrectly formatted response discovering content availability.",
+    "description": "BranchCache: Received an incorrectly formatted response while discovering availability of content."
+  },
+  {
+    "id": "6401",
+    "source": "Windows Security",
+    "name": "BranchCache: Received invalid data from a peer.",
+    "description": "BranchCache: Received invalid data from a peer. Data discarded."
+  },
+  {
+    "id": "6402",
+    "source": "Windows Security",
+    "name": "BranchCache: The message to the hosted cache offering data is incorrectly formatted.",
+    "description": "BranchCache: The message to the hosted cache offering it data is incorrectly formatted."
+  },
+  {
+    "id": "6403",
+    "source": "Windows Security",
+    "name": "BranchCache: Hosted cache sent an incorrectly formatted response.",
+    "description": "BranchCache: The hosted cache sent an incorrectly formatted response to the client."
+  },
+  {
+    "id": "6404",
+    "source": "Windows Security",
+    "name": "BranchCache: Hosted cache could not be authenticated.",
+    "description": "BranchCache: Hosted cache could not be authenticated using the provisioned SSL certificate."
+  },
+  {
+    "id": "6405",
+    "source": "Windows Security",
+    "name": "BranchCache: Multiple instances of an event occurred.",
+    "description": "BranchCache: Summarizes multiple occurrences of a specific BranchCache event ID."
+  },
+  {
+    "id": "6406",
+    "source": "Windows Security",
+    "name": "A client registered with Windows Firewall.",
+    "description": "A client registered to Windows Firewall to control filtering."
+  },
+  {
+    "id": "6407",
+    "source": "Windows Security",
+    "name": "A client unregistered from Windows Firewall.",
+    "description": "A client unregistered from Windows Firewall."
+  },
+  {
+    "id": "6408",
+    "source": "Windows Security",
+    "name": "A registered product failed, Windows Firewall is now controlling filtering.",
+    "description": "Registered product failed and Windows Firewall is now controlling the filtering."
+  },
+  {
+    "id": "6409",
+    "source": "Windows Security",
+    "name": "BranchCache: A service connection point object could not be parsed.",
+    "description": "BranchCache: A service connection point object could not be parsed."
+  },
+  {
+    "id": "6410",
+    "source": "Windows Security",
+    "name": "Code integrity determined that a file does not meet security requirements.",
+    "description": "Code integrity determined that a file does not meet the security requirements to load into a process."
+  },
+  {
+    "id": "6416",
+    "source": "Windows Security",
+    "name": "A new external device was recognized by the System.",
+    "description": "A new external device was recognized by the System."
+  },
+  {
+    "id": "6417",
+    "source": "Windows Security",
+    "name": "The FIPS mode crypto self-tests succeeded.",
+    "description": "The FIPS mode crypto self-tests succeeded."
+  },
+  {
+    "id": "6418",
+    "source": "Windows Security",
+    "name": "The FIPS mode crypto self-tests failed.",
+    "description": "The FIPS mode crypto self-tests failed."
+  },
+  {
+    "id": "6419",
+    "source": "Windows Security",
+    "name": "A request was made to disable a device.",
+    "description": "A request was made to disable a device."
+  },
+  {
+    "id": "6420",
+    "source": "Windows Security",
+    "name": "A device was disabled.",
+    "description": "A device was disabled."
+  },
+  {
+    "id": "6421",
+    "source": "Windows Security",
+    "name": "A request was made to enable a device.",
+    "description": "A request was made to enable a device."
+  },
+  {
+    "id": "6422",
+    "source": "Windows Security",
+    "name": "A device was enabled.",
+    "description": "A device was enabled."
+  },
+  {
+    "id": "6423",
+    "source": "Windows Security",
+    "name": "The installation of this device is forbidden by system policy.",
+    "description": "The installation of this device is forbidden by system policy."
+  },
+  {
+    "id": "6424",
+    "source": "Windows Security",
+    "name": "The installation of this device was allowed by system policy.",
+    "description": "The installation of this device was allowed, after having previously been forbidden by policy."
+  },
+  {
+    "id": "8001",
+    "source": "Windows Security",
+    "name": "NTLM authentication failed because the SuppressDomainCredentialForwarding registry key was set.",
+    "description": "NTLM authentication failed because the SuppressDomainCredentialForwarding registry key was set."
+  },
+  {
+    "id": "8002",
+    "source": "Windows Security",
+    "name": "NTLM server blocked NTLM pass-through authentication.",
+    "description": "NTLM server blocked NTLM pass-through authentication (due to RestrictSendingNTLMTraffic registry key)."
+  },
+  {
+    "id": "8003",
+    "source": "Windows Security",
+    "name": "NTLM authentication failed because the NTLM policy audit-only.",
+    "description": "NTLM authentication failed because the NTLM policy is set to audit-only mode."
+  },
+  {
+    "id": "8004",
+    "source": "Windows Security",
+    "name": "NTLM authentication failed because NTLM was blocked in the domain.",
+    "description": "NTLM authentication failed because NTLM was blocked in the domain."
+  },
+  {
+    "id": "8005",
+    "source": "Windows Security",
+    "name": "NTLM authentication used because the SuppressDomainCredentialForwarding registry key was not set.",
+    "description": "NTLM authentication used because the SuppressDomainCredentialForwarding registry key was not set."
+  },
+  {
+    "id": "8006",
+    "source": "Windows Security",
+    "name": "NTLM pass-through authentication was not blocked by the NTLM server.",
+    "description": "NTLM pass-through authentication was not blocked by the NTLM server."
+  },
+  {
+    "id": "8007",
+    "source": "Windows Security",
+    "name": "NTLM authentication used because the NTLM policy audit-only.",
+    "description": "NTLM authentication used because the NTLM policy is set to audit-only mode."
+  },
+   {
+     "id": "8193",
+     "source": "Windows Security",
+     "name": "An error occurred while retrieving the retrieve the certificate revocation list (CRL)",
+     "description": "An error occurred while retrieving the retrieve the certificate revocation list (CRL) from %1."
+   },
+   {
+     "id": "8194",
+     "source": "Windows Security",
+     "name": "The certificate revocation list (CRL) was successfully retrieved",
+     "description": "The certificate revocation list (CRL) was successfully retrieved from %1."
+   },
+   {
+     "id": "8195",
+     "source": "Windows Security",
+     "name": "An error occurred while downloading the certificate revocation list (CRL)",
+     "description": "An error occurred while downloading the certificate revocation list (CRL) from %1."
+   },
+   {
+     "id": "8196",
+     "source": "Windows Security",
+     "name": "An error occurred while retrieving the Online Certificate Status Protocol (OCSP) response",
+     "description": "An error occurred while retrieving the Online Certificate Status Protocol (OCSP) response from %1."
+   },
+   {
+     "id": "8197",
+     "source": "Windows Security",
+     "name": "The Online Certificate Status Protocol (OCSP) response was successfully retrieved",
+     "description": "The Online Certificate Status Protocol (OCSP) response was successfully retrieved from %1."
+   },
+   {
+     "id": "8198",
+     "source": "Windows Security",
+     "name": "An error occurred while downloading the Online Certificate Status Protocol (OCSP) response",
+     "description": "An error occurred while downloading the Online Certificate Status Protocol (OCSP) response from %1."
+   },
+   {
+     "id": "8199",
+     "source": "Windows Security",
+     "name": "An error occurred while retrieving the Authority Information Access (AIA) certificate",
+     "description": "An error occurred while retrieving the Authority Information Access (AIA) certificate from %1."
+   },
+   {
+     "id": "8200",
+     "source": "Windows Security",
+     "name": "The Authority Information Access (AIA) certificate was successfully retrieved",
+     "description": "The Authority Information Access (AIA) certificate was successfully retrieved from %1."
+   },
+   {
+     "id": "8201",
+     "source": "Windows Security",
+     "name": "An error occurred while downloading the Authority Information Access (AIA) certificate",
+     "description": "An error occurred while downloading the Authority Information Access (AIA) certificate from %1."
+   },
+   {
+     "id": "8224",
+     "source": "Windows Security",
+     "name": "The content in the %1 CAB file was modified.",
+     "description": "The content in the %1 CAB file was modified."
+   },
+   {
+    "id": "1102",
+    "source": "Windows Security",
+    "name": "The audit log was cleared.",
+    "description": "The audit log was cleared (typically the security log)."
+  },
+  {
+    "id": "5050",
+    "source": "Windows Security",
+    "name": "An attempt to programmatically disable the Windows Firewall was rejected.",
+    "description": "An attempt to programmatically disable the Windows Firewall using a call to InetFwProfile.FirewallEnabled(False) was rejected (API not supported on this OS version)."
+  },
+  {
+    "id": "5827",
+    "source": "Windows Security",
+    "name": "Netlogon denied vulnerable secure channel connection (Machine Account).",
+    "description": "The Netlogon service denied a vulnerable Netlogon secure channel connection from a machine account."
+  },
+  {
+    "id": "5828",
+    "source": "Windows Security",
+    "name": "Netlogon denied vulnerable secure channel connection (Trust Account).",
+    "description": "The Netlogon service denied a vulnerable Netlogon secure channel connection using a trust account."
+  },
+  {
+    "id": "6008",
+    "source": "Windows System",
+    "name": "The previous system shutdown was unexpected.",
+    "description": "The previous system shutdown at time on date was unexpected."
+  },
+  {
+    "id": "24577",
+    "source": "BitLocker Driver",
+    "name": "Encryption of volume started.",
+    "description": "Encryption of volume %1 started."
+  },
+  {
+    "id": "24578",
+    "source": "BitLocker Driver",
+    "name": "Encryption of volume stopped.",
+    "description": "Encryption of volume %1 stopped."
+  },
+  {
+    "id": "24579",
+    "source": "BitLocker Driver",
+    "name": "Encryption of volume completed.",
+    "description": "Encryption of volume %1 completed successfully."
+  },
+  {
+    "id": "24580",
+    "source": "BitLocker Driver",
+    "name": "Decryption of volume started.",
+    "description": "Decryption of volume %1 started."
+  },
+  {
+    "id": "24581",
+    "source": "BitLocker Driver",
+    "name": "Decryption of volume stopped.",
+    "description": "Decryption of volume %1 stopped."
+  },
+  {
+    "id": "24582",
+    "source": "BitLocker Driver",
+    "name": "Decryption of volume completed.",
+    "description": "Decryption of volume %1 completed successfully."
+  },
+  {
+    "id": "24583",
+    "source": "BitLocker Driver",
+    "name": "Conversion worker thread for volume started.",
+    "description": "Conversion worker thread for volume %1 started."
+  },
+  {
+    "id": "24584",
+    "source": "BitLocker Driver",
+    "name": "Conversion worker thread for volume temporarily stopped.",
+    "description": "Conversion worker thread for volume %1 temporarily stopped."
+  },
+  {
+    "id": "24586",
+    "source": "BitLocker Driver",
+    "name": "An error was encountered converting volume.",
+    "description": "An error was encountered converting volume %1."
+  },
+  {
+    "id": "24588",
+    "source": "BitLocker Driver",
+    "name": "Volume contains bad clusters.",
+    "description": "Volume %1 contains bad clusters. These clusters will be skipped during conversion."
+  },
+  {
+    "id": "24592",
+    "source": "BitLocker Driver",
+    "name": "An attempt to automatically restart conversion on volume failed.",
+    "description": "An attempt to automatically restart conversion on volume %1 failed."
+  },
+  {
+    "id": "24593",
+    "source": "BitLocker Driver",
+    "name": "Metadata write error on volume.",
+    "description": "Metadata write: Volume %1 returning errors while trying to modify metadata. If failures continue, decrypt volume."
+  },
+  {
+    "id": "24594",
+    "source": "BitLocker Driver",
+    "name": "Metadata rebuild write copy failed.",
+    "description": "Metadata rebuild: An attempt to write a copy of metadata on volume %1 failed and may appear as disk corruption. If failures continue, decrypt volume."
+  },
+  {
+    "id": "24595",
+    "source": "BitLocker Driver",
+    "name": "Volume contains bad clusters.",
+    "description": "Volume %1 contains bad clusters. These clusters will be skipped during conversion."
+  },
+  {
+    "id": "24621",
+    "source": "BitLocker Driver",
+    "name": "Initial state check: Rolling volume conversion transaction.",
+    "description": "Initial state check: Rolling volume conversion transaction on %1."
+  }
+]

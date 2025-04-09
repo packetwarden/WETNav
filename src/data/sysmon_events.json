@@ -1,0 +1,176 @@
+[
+  {
+    "id": "1",
+    "source": "Sysmon",
+    "name": "Process Create",
+    "description": "Process creation provides extended information about a newly created process."
+  },
+  {
+    "id": "2",
+    "source": "Sysmon",
+    "name": "File Create Time Changed",
+    "description": "A process changed a file creation time. This event helps track the real creation time of a file. Attackers may change file time attributes to hide their tracks."
+  },
+  {
+    "id": "3",
+    "source": "Sysmon",
+    "name": "Network Connection",
+    "description": "Logs TCP/UDP connections on the machine. It is disabled by default. Each connection is linked to a process through the ProcessId and ProcessGUID fields."
+  },
+  {
+    "id": "4",
+    "source": "Sysmon",
+    "name": "Sysmon Service State Changed",
+    "description": "Reports the state of the Sysmon service (started or stopped)."
+  },
+  {
+    "id": "5",
+    "source": "Sysmon",
+    "name": "Process Terminated",
+    "description": "Logs when a process terminates. It provides the UtcTime, ProcessGuid and ProcessId of the process."
+  },
+  {
+    "id": "6",
+    "source": "Sysmon",
+    "name": "Driver Loaded",
+    "description": "Logs loading of a driver on the system. The hashes are provided as well as signature information."
+  },
+  {
+    "id": "7",
+    "source": "Sysmon",
+    "name": "Image Loaded",
+    "description": "Logs when a module is loaded in a specific process. This event is disabled by default and needs to be configured with the –l option. It indicates the process in which the module is loaded, hashes and signature information."
+  },
+  {
+    "id": "8",
+    "source": "Sysmon",
+    "name": "Create Remote Thread",
+    "description": "Detects when a process creates a thread in another process. This technique is used by malware to inject code and hide in other processes."
+  },
+  {
+    "id": "9",
+    "source": "Sysmon",
+    "name": "Raw Access Read",
+    "description": "Detects when a process conducts reading operations from the drive using \\\\.\\ notation. This technique is often used by malware for data exfiltration of files that are locked for reading, as well as to avoid file access auditing tools."
+  },
+  {
+    "id": "10",
+    "source": "Sysmon",
+    "name": "Process Accessed",
+    "description": "Reports when a process opens another process memory. This is often required for reading and writing memory sections, and is used by tools like Mimikatz to access LSASS process memory."
+  },
+  {
+    "id": "11",
+    "source": "Sysmon",
+    "name": "File Create",
+    "description": "Logs when a file is created or overwritten. This event is useful for monitoring autostart locations, like the Startup folder, as well as temporary and download directories, which are common places malware drops during initial infection."
+  },
+  {
+    "id": "12",
+    "source": "Sysmon",
+    "name": "Registry Event (Object Create and Delete)",
+    "description": "Logs registry key and value create and delete operations. This event is useful for monitoring for changes to Registry persistence locations or specific malware registry modifications."
+  },
+  {
+    "id": "13",
+    "source": "Sysmon",
+    "name": "Registry Event (Value Set)",
+    "description": "Logs registry value modifications. This event records the value written for Registry values of type DWORD and QWORD."
+  },
+  {
+    "id": "14",
+    "source": "Sysmon",
+    "name": "Registry Event (Key and Value Rename)",
+    "description": "Logs registry key and value rename operations. This event is useful for monitoring changes to Registry keys or values that may be used for persistence."
+  },
+  {
+    "id": "15",
+    "source": "Sysmon",
+    "name": "File Stream Created",
+    "description": "Logs when a named file stream is created. Malware might use file streams to harbor its data or configuration settings."
+  },
+  {
+    "id": "16",
+    "source": "Sysmon",
+    "name": "Sysmon Configuration Change",
+    "description": "Logs changes in the Sysmon configuration - for example, when the configuration is updated using the -c command line option."
+  },
+  {
+    "id": "17",
+    "source": "Sysmon",
+    "name": "Pipe Created",
+    "description": "Generates an event when a named pipe is created. Malware often uses named pipes for interprocess communication."
+  },
+  {
+    "id": "18",
+    "source": "Sysmon",
+    "name": "Pipe Connected",
+    "description": "Logs when a named pipe connection is made between a client and a server."
+  },
+  {
+    "id": "19",
+    "source": "Sysmon",
+    "name": "WMI Event Filter Activity Detected",
+    "description": "Logs the registration of WMI event filters, which is a method used by malware to execute."
+  },
+  {
+    "id": "20",
+    "source": "Sysmon",
+    "name": "WMI Event Consumer Activity Detected",
+    "description": "Logs the registration of WMI event consumers."
+  },
+  {
+    "id": "21",
+    "source": "Sysmon",
+    "name": "WMI Event Consumer To Filter Activity Detected",
+    "description": "Logs the registration of a consumer to a filter."
+  },
+  {
+    "id": "22",
+    "source": "Sysmon",
+    "name": "DNS Query",
+    "description": "Logs when a process executes a DNS query, whether the result is successful or fails, cached or not."
+  },
+  {
+    "id": "23",
+    "source": "Sysmon",
+    "name": "File Delete",
+    "description": "Logs when a file is deleted or archived for deletion. This includes deleting files from the recycle bin."
+  },
+  {
+    "id": "24",
+    "source": "Sysmon",
+    "name": "Clipboard Change",
+    "description": "Logs when the system clipboard contents change. Generates an event when the clipboard text changes."
+  },
+  {
+    "id": "25",
+    "source": "Sysmon",
+    "name": "Process Tampering",
+    "description": "Logs when process hiding techniques like process hollowing or process herpaderping occur."
+  },
+  {
+    "id": "26",
+    "source": "Sysmon",
+    "name": "File Delete Detected",
+    "description": "Logs when Sysmon detects that a file is deleted (logged on delete)."
+  },
+  {
+    "id": "27",
+    "source": "Sysmon",
+    "name": "File Block Executable",
+    "description": "Logs when Sysmon blocks the creation of executable files based on configuration."
+  },
+  {
+    "id": "28",
+    "source": "Sysmon",
+    "name": "File Block Shredding",
+    "description": "Logs when Sysmon blocks file shredding based on configuration."
+  },
+  {
+    "id": "255",
+    "source": "Sysmon",
+    "name": "Error",
+    "description": "Logs when an error occurred within Sysmon. Errors may happen if the system is under heavy load and certain tasked could not be performed or a bug exists in the Sysmon service."
+  }
+]
