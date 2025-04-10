@@ -15,6 +15,16 @@ const TOOL_DESCRIPTION = "Quick reference for Windows security event investigati
 export const metadata: Metadata = {
   title: TOOL_NAME, // Use the new tool name
   description: TOOL_DESCRIPTION,
+  icons: {
+    icon: '/favicon.ico', // Path to your favicon in the app directory root
+    // Optional: Add other icon types if needed later
+    // shortcut: '/favicon.ico',
+    // apple: '/apple-icon.png', // Example: Place apple-icon.png in /public
+    // other: {
+    //   rel: 'apple-touch-icon-precomposed',
+    //   url: '/apple-touch-icon-precomposed.png',
+    // },
+  },
 };
 
 export default function RootLayout({
