@@ -78,7 +78,7 @@ The tool relies on several data sources, processed and merged during the build:
 
 Explore the deployed tool here:
 
-**>>> [Windows Event Threat Navigator](<<<YOUR_VERCEL_DEPLOYMENT_URL>>>) <<<**
+[Windows Event Threat Navigator](https://wetnav.patelhari.com/)
 
 1.  **Search:** Type an Event ID, keyword, category, or MITRE ID/Name.
 2.  **Filter:** Click "Windows" or "Sysmon" buttons.
