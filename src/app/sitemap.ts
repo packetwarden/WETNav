@@ -17,6 +17,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/events`,
+      lastModified: lastUpdate,
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/top-events`,
       lastModified: lastUpdate,
       priority: 0.9,

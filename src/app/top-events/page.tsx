@@ -84,7 +84,7 @@ export default function TopEventsPage() {
           {/* Back Navigation */}
           <div className="mb-6">
             <Link
-              href="/"
+              href="/events"
               className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
             >
               <FiArrowLeft className="h-4 w-4" />
