@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 // --- Configuration ---
 const TOOL_NAME = "Windows Event Threat Navigator"; // <<< REPLACE with your chosen tool name
 const TOOL_DESCRIPTION = "Comprehensive reference guide for Windows Security and Sysmon events. Essential tool for SOC analysts, threat hunters, and incident responders to investigate security events with MITRE ATT&CK mappings."; // <<< Update description
-const SITE_URL = "https://wetnavigator.com";
+const SITE_URL = "https://wetnav.patelhari.com/";
 // --- End Configuration ---
 
 export const metadata: Metadata = {
