@@ -23,7 +23,8 @@ At its heart, this tool provides a searchable interface to:
 2.  See the event's **name/description**.
 3.  View potential **MITRE ATT&CK® technique mappings**.
 4.  Access **notes on common scenarios** or analysis considerations.
-5.  **Filter** events by source (Windows/Sysmon).
+5.  Review **key log fields** that SOC/IR teams should focus on.
+6.  **Filter** events by source (Windows/Sysmon).
 
 ## Key Features 🚀
 
@@ -36,6 +37,11 @@ At its heart, this tool provides a searchable interface to:
     *   Uses **tabs with horizontal scrolling** for events mapped to multiple techniques.
     *   Shows Technique ID, Name, Tactics (as tags), and cleaned Description derived from processed STIX data.
     *   Includes important disclaimers about mapping interpretation.
+*   **Key Log Fields:**
+    *   Shows critical fields SOC/IR teams should focus on for each event (**152 events covered**).
+    *   Uses **exact technical field names** from Windows Event Logs (e.g., `SubjectUserName`, `LogonType`, `IpAddress`).
+    *   Provides detailed descriptions with examples, status codes, and correlation guidance.
+    *   Covers authentication, account management, process execution, network activity, policy changes, and more.
 *   **Contextual Notes:** Displays event categories and analyst-curated notes/scenarios where available.
 *   **Responsive Dark UI:** Clean, professional interface inspired by modern security tools, built with Tailwind CSS.
 
@@ -61,6 +67,7 @@ The tool relies on several data sources, processed and merged during the build:
     *   **`categories.ts`:** Manually assigns a category (e.g., "Authentication", "Process Execution") to each Event ID.
     *   **`scenarios.ts`:** Manually curated notes, common legitimate uses, or analysis "gotchas" for specific Event IDs.
     *   **`mitre.ts`:** **Crucially, this file manually maps specific Event IDs to one or more MITRE ATT&CK® Technique IDs (e.g., "T1059", "T1110.003").** This requires analyst research and judgment.
+    *   **`keyFields.ts`:** Maps Event IDs to critical log fields with exact technical field names and detailed descriptions. Covers 152 events across Windows Security and Sysmon, based on Microsoft documentation and security analysis best practices.
 
 3.  **Processed MITRE ATT&CK® Data (`/src/data/mitre_processed/techniques.json`):**
     *   **Source:** Generated *offline* using a separate Python script (`process_stix.py` - available in repo history, requires manual execution) that parses the official `enterprise-attack.json` STIX bundle from [mitre-attack/attack-stix-data](https://github.com/mitre-attack/attack-stix-data/).
@@ -69,10 +76,10 @@ The tool relies on several data sources, processed and merged during the build:
 4.  **Merging Logic (`/src/app/page.tsx`):**
     *   The Next.js app (server-side) loads all the above data.
     *   It iterates through the base events.
-    *   For each event, it looks up its Category and Scenarios from the mapping files.
+    *   For each event, it looks up its Category, Scenarios, and Key Log Fields from the mapping files.
     *   It uses the manual `mitre.ts` mapping to find relevant Technique IDs.
     *   It then looks up the *full details* for those Technique IDs in the processed `techniques.json` data.
-    *   This merged `EventDetail` object (including the rich MITRE data) is passed to the client-side components.
+    *   This merged `EventDetail` object (including the rich MITRE data and key fields) is passed to the client-side components.
 
 ## Usage / Live Demo 🌐
 
@@ -106,9 +113,9 @@ Want to play around with the code?
 
 ## Future Vibes / Ideas 🤔
 
-*   Add "Key Fields" section to the detail view.
 *   Implement more advanced search syntax (AND, NOT, field specifiers).
 *   Add more comprehensive manual MITRE mappings and scenarios.
+*   Expand Key Log Fields coverage to additional events.
 *   Integrate Sysmon configuration guidance links.
 *   UI/UX refinements (loading states, animations).
 *   Theme toggle (Light/Dark).
