@@ -265,12 +265,44 @@ export default function EventDetailView({ event, onClose }: EventDetailViewProps
             </div>
           )}
 
-           {/* Key Fields Section */}
-           <Section title="Key Log Fields" icon={FiList}>
-                <p className="text-slate-500 italic">
-                    (Key field details will be added in a future update.)
-                </p>
-            </Section>
+           {/* Key Log Fields Section */}
+           {event.keyLogFields && event.keyLogFields.length > 0 ? (
+             <Section title="Key Log Fields" icon={FiList}>
+               <div className="space-y-3">
+                 <p className="text-xs text-slate-400 mb-3">
+                   Important fields SOC/IR teams should focus on for this event:
+                 </p>
+                 <div className="space-y-2.5">
+                   {event.keyLogFields.map((field, index) => (
+                     <div
+                       key={index}
+                       className="p-3 bg-slate-800/40 rounded border border-slate-700/50 hover:border-slate-600/70 transition-colors"
+                     >
+                       <div className="flex items-start gap-2">
+                         <span className="inline-block mt-0.5 h-1.5 w-1.5 rounded-full bg-blue-400 shrink-0"></span>
+                         <div className="flex-1 min-w-0">
+                           <code className="text-sm font-semibold text-blue-300 break-words">
+                             {field.field}
+                           </code>
+                           <p className="text-sm text-slate-300 mt-1 leading-relaxed">
+                             {field.description}
+                           </p>
+                         </div>
+                       </div>
+                     </div>
+                   ))}
+                 </div>
+               </div>
+             </Section>
+           ) : (
+             <Section title="Key Log Fields" icon={FiList}>
+               <div className="p-3 bg-yellow-900/10 border border-yellow-700/30 rounded">
+                 <p className="text-sm text-yellow-200/80 italic">
+                   Key log field information is not yet available for this event. Refer to official documentation for field details.
+                 </p>
+               </div>
+             </Section>
+           )}
 
            {/* Official Documentation Section */}
            {event.officialLink && (
