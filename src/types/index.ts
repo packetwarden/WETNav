@@ -8,6 +8,11 @@ export interface MitreAttackInfo {
   // Add other fields from techniques.json if needed (e.g., platforms)
 }
 
+export interface KeyLogField {
+  field: string; // Technical field name
+  description: string; // Brief description of the field
+}
+
 export interface EventDetail {
   id: string;
   source: 'Windows Security' | 'Sysmon' | 'Other';
@@ -18,6 +23,7 @@ export interface EventDetail {
   // This will now hold the FULL details looked up from techniques.json
   mitreAttack?: MitreAttackInfo[];
   commonScenarios?: string[];
+  keyLogFields?: KeyLogField[];
 }
 
 

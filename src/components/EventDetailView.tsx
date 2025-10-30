@@ -265,12 +265,26 @@ export default function EventDetailView({ event, onClose }: EventDetailViewProps
             </div>
           )}
 
-           {/* Key Fields Section */}
-           <Section title="Key Log Fields" icon={FiList}>
-                <p className="text-slate-500 italic">
-                    (Key field details will be added in a future update.)
-                </p>
-            </Section>
+           {/* Key Log Fields Section */}
+           {event.keyLogFields && event.keyLogFields.length > 0 ? (
+             <Section title="Key Log Fields" icon={FiList}>
+               <ul className="list-none pl-0 space-y-2 text-slate-300">
+                 {event.keyLogFields.map((field, index) => (
+                   <li key={index} className="break-words">
+                     <code className="text-sm font-semibold text-blue-300">{field.field}</code>
+                     <span className="text-slate-400"> - </span>
+                     <span className="text-sm">{field.description}</span>
+                   </li>
+                 ))}
+               </ul>
+             </Section>
+           ) : (
+             <Section title="Key Log Fields" icon={FiList}>
+               <p className="text-slate-500 italic text-sm">
+                 Key log field information is not yet available for this event. Refer to official documentation for field details.
+               </p>
+             </Section>
+           )}
 
            {/* Official Documentation Section */}
            {event.officialLink && (

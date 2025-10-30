@@ -11,6 +11,8 @@ import { eventCategories } from "@/data/mappings/categories";
 import { eventScenarios } from "@/data/mappings/scenarios";
 // Import the MANUAL Event ID -> Technique ID mapping
 import { eventMitreTechniqueIds } from "@/data/mappings/mitre";
+// Import the Key Log Fields mapping
+import { eventKeyFields } from "@/data/mappings/keyFields";
 
 
 // Prepare the techniques data for efficient lookup (Map: Technique ID -> Full Detail Object)
@@ -43,11 +45,12 @@ const findTechniqueDetails = (attackId: string): MitreAttackInfo | undefined => 
 };
 
 // Function to merge base event data with mapped metadata
-const mergeEventData = (baseEvents: Omit<EventDetail, 'category' | 'mitreAttack' | 'commonScenarios'>[]): EventDetail[] => {
+const mergeEventData = (baseEvents: Omit<EventDetail, 'category' | 'mitreAttack' | 'commonScenarios' | 'keyLogFields'>[]): EventDetail[] => {
     return baseEvents.map(baseEvent => {
         const eventId = baseEvent.id;
         const category = eventCategories[eventId];
         const commonScenarios = eventScenarios[eventId];
+        const keyLogFields = eventKeyFields[eventId];
 
         let mitreAttack: MitreAttackInfo[] | undefined = undefined;
 
@@ -67,6 +70,7 @@ const mergeEventData = (baseEvents: Omit<EventDetail, 'category' | 'mitreAttack'
             ...(category && { category }),
             ...(mitreAttack && mitreAttack.length > 0 && { mitreAttack }), // Add the array of full MitreAttackInfo objects
             ...(commonScenarios && { commonScenarios }),
+            ...(keyLogFields && { keyLogFields }),
         };
         return mergedEvent;
     });
