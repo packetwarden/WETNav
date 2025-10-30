@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 // --- Configuration ---
 const TOOL_NAME = "Windows Event Threat Navigator"; // <<< REPLACE with your chosen tool name
-const TOOL_DESCRIPTION = "Quick reference for Windows security event investigations"; // <<< Update description
+const TOOL_DESCRIPTION = "Windows Event Threat Navigator: Quick reference linking Windows/Sysmon events to MITRE ATT&CK®"; // <<< Update description
 // --- End Configuration ---
 
 export const metadata: Metadata = {
