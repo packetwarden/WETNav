@@ -58,12 +58,48 @@ export default function AboutPage() {
               <p>The content in this project is derived from multiple authoritative sources:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li><strong>Microsoft Official Documentation:</strong> Event definitions and technical specifications</li>
-                <li><strong>MITRE ATT&CK Framework:</strong> Adversary technique mappings and tactics</li>
+                <li><strong>MITRE ATT&CK Framework:</strong> Adversary technique mappings sourced from official STIX data</li>
                 <li><strong>Real-World Incident Analysis:</strong> Patterns observed during actual security investigations</li>
                 <li><strong>Threat Intelligence Reports:</strong> APT campaign documentation and malware analysis</li>
                 <li><strong>Security Research Publications:</strong> Academic and industry research on Windows forensics</li>
                 <li><strong>Community Knowledge:</strong> Insights from security practitioners and threat hunters</li>
               </ul>
+              <p className="mt-4">
+                Event descriptions are derived from Microsoft documentation and community sources. Event categories and analyst notes are manually curated based on practical security monitoring experience. The mapping between Event IDs and specific MITRE ATT&CK techniques is maintained manually and represents potential relevance, requiring analyst judgment and environmental context.
+              </p>
+            </div>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold text-slate-100 mb-4">Technology Stack</h2>
+            <p className="text-slate-300 leading-relaxed mb-4">
+              The Windows Event Threat Navigator is built with modern web technologies to provide a fast, responsive, and accessible user experience. The application is built with Next.js 14 using the App Router architecture, TypeScript for type safety, Tailwind CSS for professional styling, and React Icons for consistent iconography. The site is statically generated at build time for optimal performance and deployed on Vercel for global content delivery.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="p-4 bg-slate-800/50 rounded-lg border border-slate-700">
+                <div className="text-sm text-slate-400 mb-1">Framework</div>
+                <div className="text-lg font-semibold text-slate-100">Next.js 14</div>
+              </div>
+              <div className="p-4 bg-slate-800/50 rounded-lg border border-slate-700">
+                <div className="text-sm text-slate-400 mb-1">Language</div>
+                <div className="text-lg font-semibold text-slate-100">TypeScript</div>
+              </div>
+              <div className="p-4 bg-slate-800/50 rounded-lg border border-slate-700">
+                <div className="text-sm text-slate-400 mb-1">Styling</div>
+                <div className="text-lg font-semibold text-slate-100">Tailwind CSS</div>
+              </div>
+              <div className="p-4 bg-slate-800/50 rounded-lg border border-slate-700">
+                <div className="text-sm text-slate-400 mb-1">Icons</div>
+                <div className="text-lg font-semibold text-slate-100">React Icons</div>
+              </div>
+              <div className="p-4 bg-slate-800/50 rounded-lg border border-slate-700">
+                <div className="text-sm text-slate-400 mb-1">Hosting</div>
+                <div className="text-lg font-semibold text-slate-100">Vercel</div>
+              </div>
+              <div className="p-4 bg-slate-800/50 rounded-lg border border-slate-700">
+                <div className="text-sm text-slate-400 mb-1">Rendering</div>
+                <div className="text-lg font-semibold text-slate-100">Static (SSG)</div>
+              </div>
             </div>
           </section>
 

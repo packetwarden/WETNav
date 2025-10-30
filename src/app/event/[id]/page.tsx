@@ -348,13 +348,34 @@ export default function EventPage({ params }: { params: { id: string } }) {
             <EventDetailView event={event} />
           </div>
 
-          {/* MITRE ATT&CK Techniques */}
+          {/* MITRE ATT&CK® Mapping */}
           {event.mitreAttack && event.mitreAttack.length > 0 && (
-            <section className="mt-8 p-6 bg-slate-800/30 rounded-lg border border-slate-700/60">
-              <h2 className="text-xl font-semibold text-slate-100 mb-4">
-                MITRE ATT&CK Techniques ({event.mitreAttack.length})
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <section className="mt-8">
+              {/* Professional Alert Note */}
+              <div className="mb-6 p-4 bg-amber-500/10 border border-amber-500/30 rounded-lg">
+                <div className="flex items-start gap-3">
+                  <FiAlertCircle className="h-5 w-5 text-amber-400 mt-0.5 flex-shrink-0" />
+                  <div className="flex-1">
+                    <h3 className="text-sm font-semibold text-amber-300 mb-2">Important Note on MITRE ATT&CK® Mappings</h3>
+                    <p className="text-sm text-amber-200/90 leading-relaxed mb-2">
+                      The MITRE ATT&CK® technique mappings presented below are based on manual interpretation and analysis of Windows Event Log behavior. These mappings are <strong>not official</strong> MITRE designations and should be used as <strong>investigative guidance only</strong>.
+                    </p>
+                    <ul className="text-xs text-amber-200/80 space-y-1 list-disc list-inside">
+                      <li>Mappings suggest potential adversary techniques that may generate this event</li>
+                      <li>Detection requires correlation with additional events and environmental context</li>
+                      <li>Always verify findings with comprehensive log analysis and threat intelligence</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* MITRE Techniques Grid */}
+              <div className="p-6 bg-slate-800/30 rounded-lg border border-slate-700/60">
+                <h2 className="text-xl font-semibold text-slate-100 mb-4 flex items-center gap-2">
+                  <FiShield className="h-5 w-5 text-red-400" />
+                  MITRE ATT&CK® Mapping ({event.mitreAttack.length})
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {event.mitreAttack.map((technique) => (
                   <a
                     key={technique.id}
@@ -383,6 +404,7 @@ export default function EventPage({ params }: { params: { id: string } }) {
                     </div>
                   </a>
                 ))}
+                </div>
               </div>
             </section>
           )}

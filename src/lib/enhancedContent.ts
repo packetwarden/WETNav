@@ -3,12 +3,14 @@
 
 import { enhancedEventContent } from '@/data/enhancedContent/top-events';
 import { criticalEventsContent2 } from '@/data/enhancedContent/critical-events-2';
+import { criticalEventsContent3 } from '@/data/enhancedContent/critical-events-3';
 import { sysmonEventsContent } from '@/data/enhancedContent/sysmon-events';
 
 // Merge all enhanced content
 export const allEnhancedContent = {
   ...enhancedEventContent,
   ...criticalEventsContent2,
+  ...criticalEventsContent3,
   ...sysmonEventsContent,
 };
 

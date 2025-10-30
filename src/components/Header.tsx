@@ -1,11 +1,9 @@
 // src/components/Header.tsx
 'use client';
 
-import { useState } from 'react'; // Import useState
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
-import { FiTerminal, FiInfo, FiShield, FiDatabase } from 'react-icons/fi'; // Import icons
-import AboutModal from './AboutModal'; // Import the modal
+import { FiTerminal, FiShield, FiDatabase } from 'react-icons/fi';
 
 // --- Configuration ---
 const TOOL_NAME = "Windows Event Threat Navigator";
@@ -13,13 +11,8 @@ const GITHUB_REPO_URL = "https://github.com/packetwarden/WETNav";
 // --- End Configuration ---
 
 export default function Header() {
-  // --- Add State for About Modal ---
-  const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
-  // ---
-
   return (
-    <> {/* Use Fragment to render modal alongside header */}
-      <header className="bg-slate-900 border-b border-slate-700/80 shadow-sm sticky top-0 z-40"> {/* Lower z-index slightly */}
+    <header className="bg-slate-900 border-b border-slate-700/80 shadow-sm sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-14 sm:h-16">
             {/* Left Side: Logo & Tool Name */}
@@ -66,16 +59,6 @@ export default function Header() {
                 <FiDatabase className="h-5 w-5" />
               </Link>
 
-              {/* Info Button */}
-              <button
-                  onClick={() => setIsAboutModalOpen(true)}
-                  className="p-1.5 text-slate-400 hover:text-slate-100 hover:bg-slate-700/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:ring-blue-500 rounded-md transition-colors"
-                  aria-label="About this tool"
-                  title="About this tool"
-              >
-                  <FiInfo className="h-5 w-5 sm:h-6 sm:w-6" />
-              </button>
-
               {/* GitHub Button */}
               <Link
                 href={GITHUB_REPO_URL}
@@ -91,9 +74,5 @@ export default function Header() {
           </div>
         </div>
       </header>
-
-      {/* Render Modal Conditionally - It will overlay everything due to fixed positioning */}
-       <AboutModal isOpen={isAboutModalOpen} onClose={() => setIsAboutModalOpen(false)} />
-    </>
   );
 }
