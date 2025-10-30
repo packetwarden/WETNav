@@ -3,9 +3,8 @@
 
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { FiSearch, FiShield, FiActivity, FiZap, FiBook, FiUsers, FiCheckCircle, FiArrowRight } from 'react-icons/fi';
+import { FiSearch, FiShield, FiActivity, FiZap, FiBook, FiUsers, FiCheckCircle, FiArrowRight, FiDatabase } from 'react-icons/fi';
 import { getAllEvents, getTopExploitedEvents } from "@/lib/eventData";
-import EventSearchClient from "@/components/EventSearchClient";
 
 const SITE_URL = "https://wetnav.patelhari.com";
 
@@ -74,19 +73,26 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link
+                href="/events"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-semibold transition-colors shadow-lg shadow-blue-500/20"
+              >
+                <FiDatabase className="h-5 w-5" />
+                Browse All Events
+                <FiArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
                 href="/top-events"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-semibold transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-slate-700 hover:bg-slate-600 text-white font-semibold transition-colors border border-slate-600"
               >
                 <FiShield className="h-5 w-5" />
-                View Top Exploited Events
-                <FiArrowRight className="h-4 w-4" />
+                Top Exploited Events
               </Link>
               <Link
                 href="/guides/windows-events"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-slate-700 hover:bg-slate-600 text-white font-semibold transition-colors border border-slate-600"
               >
                 <FiBook className="h-5 w-5" />
-                Getting Started Guide
+                Getting Started
               </Link>
             </div>
 
@@ -160,9 +166,9 @@ export default function Home() {
               <div className="w-12 h-12 rounded-lg bg-purple-500/20 border border-purple-500/30 flex items-center justify-center mb-4">
                 <FiSearch className="h-6 w-6 text-purple-400" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-100 mb-3">Fast Search & Filter</h3>
+              <h3 className="text-xl font-semibold text-slate-100 mb-3">Advanced Search & Filter</h3>
               <p className="text-slate-300 leading-relaxed">
-                Instantly search across all 470 events by Event ID, name, description, category, or MITRE technique. Filter by Windows Security or Sysmon to focus your research.
+                Browse the complete event database with powerful filtering by source, category, MITRE technique, and enhanced content. Multiple view modes and instant search across all 470 events.
               </p>
             </div>
 
@@ -299,16 +305,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Search Section */}
-      <section className="bg-gray-900 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-slate-100 mb-4">Search All Events</h2>
-            <p className="text-lg text-slate-300">
-              Search through {allEvents.length} documented events by ID, name, description, category, or MITRE technique
-            </p>
-          </div>
-          <EventSearchClient allEvents={allEvents} />
+      {/* Browse All Events CTA */}
+      <section className="bg-gray-900 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-slate-100 mb-4">Ready to Explore the Event Database?</h2>
+          <p className="text-lg text-slate-300 mb-8">
+            Browse all {allEvents.length} documented Windows Security and Sysmon events with advanced filtering, search, and MITRE ATT&CK mappings.
+          </p>
+          <Link
+            href="/events"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-blue-500 hover:bg-blue-600 text-white text-lg font-semibold transition-colors shadow-lg shadow-blue-500/20"
+          >
+            <FiDatabase className="h-6 w-6" />
+            Browse All Events
+            <FiArrowRight className="h-5 w-5" />
+          </Link>
         </div>
       </section>
     </>
