@@ -4,7 +4,7 @@
 import { useState } from 'react'; // Import useState
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
-import { FiTerminal, FiInfo } from 'react-icons/fi'; // Import FiInfo
+import { FiTerminal, FiInfo, FiShield } from 'react-icons/fi'; // Import icons
 import AboutModal from './AboutModal'; // Import the modal
 
 // --- Configuration ---
@@ -34,6 +34,27 @@ export default function Header() {
 
             {/* Right Side: Links/Actions */}
             <div className="flex items-center gap-2"> {/* Added gap */}
+              {/* Top Events Link */}
+              <Link
+                href="/top-events"
+                className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-slate-300 hover:text-slate-100 hover:bg-slate-700/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:ring-blue-500 rounded-md transition-colors"
+                aria-label="View top exploited events"
+                title="Top Exploited Events"
+              >
+                <FiShield className="h-4 w-4" />
+                <span>Top Events</span>
+              </Link>
+
+              {/* Mobile Top Events Icon */}
+              <Link
+                href="/top-events"
+                className="sm:hidden p-1.5 text-slate-400 hover:text-slate-100 hover:bg-slate-700/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:ring-blue-500 rounded-md transition-colors"
+                aria-label="View top exploited events"
+                title="Top Exploited Events"
+              >
+                <FiShield className="h-5 w-5" />
+              </Link>
+
               {/* Info Button */}
               <button
                   onClick={() => setIsAboutModalOpen(true)}

@@ -9,21 +9,83 @@ const inter = Inter({ subsets: ["latin"] });
 
 // --- Configuration ---
 const TOOL_NAME = "Windows Event Threat Navigator"; // <<< REPLACE with your chosen tool name
-const TOOL_DESCRIPTION = "Quick reference for Windows security event investigations"; // <<< Update description
+const TOOL_DESCRIPTION = "Comprehensive reference guide for Windows Security and Sysmon events. Essential tool for SOC analysts, threat hunters, and incident responders to investigate security events with MITRE ATT&CK mappings."; // <<< Update description
+const SITE_URL = "https://wetnavigator.com";
 // --- End Configuration ---
 
 export const metadata: Metadata = {
-  title: TOOL_NAME, // Use the new tool name
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: TOOL_NAME,
+    template: `%s | ${TOOL_NAME}`,
+  },
   description: TOOL_DESCRIPTION,
+  keywords: [
+    "Windows Security Events",
+    "Sysmon Events",
+    "Event Log Analysis",
+    "Threat Hunting",
+    "SOC",
+    "SIEM",
+    "Security Monitoring",
+    "Incident Response",
+    "MITRE ATT&CK",
+    "Windows Event IDs",
+    "Security Analytics",
+    "Event Viewer",
+    "Cybersecurity",
+  ],
+  authors: [{ name: "Windows Event Threat Navigator", url: SITE_URL }],
+  creator: "Windows Event Threat Navigator",
+  publisher: "Windows Event Threat Navigator",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
-    icon: '/favicon.ico', // Path to your favicon in the app directory root
-    // Optional: Add other icon types if needed later
-    // shortcut: '/favicon.ico',
-    // apple: '/apple-icon.png', // Example: Place apple-icon.png in /public
-    // other: {
-    //   rel: 'apple-touch-icon-precomposed',
-    //   url: '/apple-touch-icon-precomposed.png',
-    // },
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: SITE_URL,
+    title: TOOL_NAME,
+    description: TOOL_DESCRIPTION,
+    siteName: TOOL_NAME,
+    images: [
+      {
+        url: `${SITE_URL}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: TOOL_NAME,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: TOOL_NAME,
+    description: TOOL_DESCRIPTION,
+    creator: '@packetwarden',
+    images: [`${SITE_URL}/og-image.png`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    // Add your verification codes here when you set them up
+    // google: 'your-google-verification-code',
+    // yandex: 'your-yandex-verification-code',
+    // bing: 'your-bing-verification-code',
   },
 };
 

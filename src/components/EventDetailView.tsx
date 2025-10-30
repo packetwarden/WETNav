@@ -1,4 +1,6 @@
 // src/components/EventDetailView.tsx
+'use client';
+
 import React, { useState, useEffect } from 'react'; // Import React explicitly for useState/useEffect
 import { EventDetail, MitreAttackInfo } from "@/types"; // Adjust path as needed
 import Link from 'next/link';
@@ -10,7 +12,7 @@ import MitreTabs from './MitreTabs'; // Make sure this path is correct
 
 interface EventDetailViewProps {
   event: EventDetail | null;
-  onClose: () => void;
+  onClose?: () => void; // Make optional for standalone event pages
 }
 
 // --- Helper Components (with refined styles) ---
@@ -197,14 +199,37 @@ export default function EventDetailView({ event, onClose }: EventDetailViewProps
             </p>
           </div>
         </div>
-         {/* Close button with refined hover/focus */}
-        <button
-          onClick={onClose}
-          className="ml-3 p-1.5 text-slate-400 hover:text-slate-100 hover:bg-slate-700/70 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:ring-blue-500"
-          aria-label="Close details"
-        >
-          <FiX className="h-5 w-5" />
-        </button>
+        {onClose && (
+          <div className="flex items-center gap-2">
+            {/* View Full Page Link - only shown in sidebar view */}
+            <Link
+              href={`/event/${event.id}`}
+              className="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium text-blue-400 hover:text-blue-300 hover:bg-slate-700/70 rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:ring-blue-500"
+              aria-label="View full page for this event"
+              title="View full page"
+            >
+              <FiExternalLink className="h-3.5 w-3.5" />
+              <span>Full Page</span>
+            </Link>
+            {/* Mobile: Icon Only */}
+            <Link
+              href={`/event/${event.id}`}
+              className="sm:hidden p-1.5 text-blue-400 hover:text-blue-300 hover:bg-slate-700/70 rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:ring-blue-500"
+              aria-label="View full page for this event"
+              title="View full page"
+            >
+              <FiExternalLink className="h-4 w-4" />
+            </Link>
+            {/* Close button with refined hover/focus */}
+            <button
+              onClick={onClose}
+              className="ml-1 p-1.5 text-slate-400 hover:text-slate-100 hover:bg-slate-700/70 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:ring-blue-500"
+              aria-label="Close details"
+            >
+              <FiX className="h-5 w-5" />
+            </button>
+          </div>
+        )}
       </header>
 
       {/* Content Row: Vertical scroll */}
