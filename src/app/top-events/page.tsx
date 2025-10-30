@@ -7,30 +7,15 @@ import { getTopExploitedEvents } from "@/lib/eventData";
 export const metadata: Metadata = {
   title: "Top Exploited Windows Security Events | Most Critical Events for Threat Hunting",
   description: "Comprehensive guide to the most exploited and critical Windows Security and Sysmon events used in cyber attacks. Essential for SOC analysts, threat hunters, and incident responders.",
-  keywords: [
-    "Windows Security Events",
-    "Most Exploited Events",
-    "Critical Security Events",
-    "Threat Hunting",
-    "SOC Monitoring",
-    "SIEM Detection",
-    "Incident Response",
-    "Sysmon Events",
-    "Event 4624",
-    "Event 4688",
-    "Credential Attacks",
-    "Privilege Escalation",
-    "Persistence Techniques",
-    "MITRE ATT&CK",
-  ],
+  authors: [{ name: "Hari Patel", url: "https://wetnav.patelhari.com/about" }],
   openGraph: {
     title: "Top Exploited Windows Security Events | Critical Events for Threat Hunting",
     description: "Essential Windows Security and Sysmon events that attackers exploit most frequently. Learn which events to monitor for effective threat detection.",
-    url: "https://wetnavigator.com/top-events",
+    url: "https://wetnav.patelhari.com/top-events",
     siteName: "Windows Event Threat Navigator",
     images: [
       {
-        url: "https://wetnavigator.com/og-image.png",
+        url: "https://wetnav.patelhari.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Top Exploited Windows Security Events",
@@ -43,11 +28,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Top Exploited Windows Security Events",
     description: "Essential Windows events for threat hunting and security monitoring",
-    images: ["https://wetnavigator.com/og-image.png"],
-    creator: "@packetwarden",
+    images: ["https://wetnav.patelhari.com/og-image.png"],
+    creator: "@patelhari",
   },
   alternates: {
-    canonical: "https://wetnavigator.com/top-events",
+    canonical: "https://wetnav.patelhari.com/top-events",
   },
   robots: {
     index: true,

@@ -8,9 +8,11 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 // --- Configuration ---
-const TOOL_NAME = "Windows Event Threat Navigator"; // <<< REPLACE with your chosen tool name
-const TOOL_DESCRIPTION = "Comprehensive reference guide for Windows Security and Sysmon events. Essential tool for SOC analysts, threat hunters, and incident responders to investigate security events with MITRE ATT&CK mappings."; // <<< Update description
-const SITE_URL = "https://wetnavigator.com";
+const TOOL_NAME = "Windows Event Threat Navigator";
+const TOOL_DESCRIPTION = "Comprehensive reference guide for Windows Security and Sysmon events. Essential tool for SOC analysts, threat hunters, and incident responders to investigate security events with MITRE ATT&CK mappings.";
+const SITE_URL = "https://wetnav.patelhari.com";
+const AUTHOR_NAME = "Hari Patel";
+const AUTHOR_TITLE = "Cybersecurity Researcher";
 // --- End Configuration ---
 
 export const metadata: Metadata = {
@@ -20,24 +22,9 @@ export const metadata: Metadata = {
     template: `%s | ${TOOL_NAME}`,
   },
   description: TOOL_DESCRIPTION,
-  keywords: [
-    "Windows Security Events",
-    "Sysmon Events",
-    "Event Log Analysis",
-    "Threat Hunting",
-    "SOC",
-    "SIEM",
-    "Security Monitoring",
-    "Incident Response",
-    "MITRE ATT&CK",
-    "Windows Event IDs",
-    "Security Analytics",
-    "Event Viewer",
-    "Cybersecurity",
-  ],
-  authors: [{ name: "Windows Event Threat Navigator", url: SITE_URL }],
-  creator: "Windows Event Threat Navigator",
-  publisher: "Windows Event Threat Navigator",
+  authors: [{ name: AUTHOR_NAME, url: `${SITE_URL}/about` }],
+  creator: AUTHOR_NAME,
+  publisher: TOOL_NAME,
   formatDetection: {
     email: false,
     address: false,
@@ -67,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: TOOL_NAME,
     description: TOOL_DESCRIPTION,
-    creator: '@packetwarden',
+    creator: '@patelhari',
     images: [`${SITE_URL}/og-image.png`],
   },
   robots: {
@@ -94,8 +81,39 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Organization Schema
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": TOOL_NAME,
+    "url": SITE_URL,
+    "logo": `${SITE_URL}/logo.png`,
+    "description": TOOL_DESCRIPTION,
+    "sameAs": [
+      "https://github.com/packetwarden/WETN-vercel"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": AUTHOR_NAME,
+      "jobTitle": AUTHOR_TITLE,
+      "url": `${SITE_URL}/about`,
+      "description": "Cybersecurity researcher specializing in Windows event log analysis, threat detection, and incident response methodologies."
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Technical Support",
+      "url": "https://github.com/packetwarden/WETN-vercel/issues"
+    }
+  };
+
   return (
     <html lang="en" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body className={`${inter.className} bg-gray-900 text-gray-100`}>
         {/* Use Flexbox to structure Header, Main Content, Footer */}
         <div className="flex flex-col min-h-screen">
