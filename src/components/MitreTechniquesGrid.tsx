@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import { FiShield, FiChevronDown, FiChevronUp } from 'react-icons/fi';
-import { MitreAttackTechnique } from '@/types';
+import { MitreAttackInfo } from '@/types';
 
 interface MitreTechniquesGridProps {
-  techniques: MitreAttackTechnique[];
+  techniques: MitreAttackInfo[];
   initialDisplayCount?: number;
 }
 
