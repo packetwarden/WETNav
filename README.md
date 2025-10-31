@@ -134,8 +134,8 @@ Experience WETN in action: **[wetnav.patelhari.com](https://wetnav.patelhari.com
 
 ```bash
 # Clone the repository
-git clone https://github.com/packetwarden/WETNav
-cd WETNav-vercel
+git clone https://github.com/packetwarden/WETNav.git
+cd WETNav
 
 # Install dependencies
 npm install
