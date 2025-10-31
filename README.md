@@ -3,7 +3,7 @@
 **A fast reference tool for Windows Security & Sysmon events, designed for SOC analysts, threat hunters, and incident responders.**
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://wetnav.patelhari.com)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/packetwarden/WETN-vercel)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/packetwarden/WETNav)
 
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Next.js](https://img.shields.io/badge/Next.js-14-black)
@@ -13,7 +13,7 @@
 
 ## 🎯 About This Project
 
-Windows Event Threat Navigator (WETN) is a quick reference tool built to solve a common analyst problem: rapidly looking up Windows Security and Sysmon event IDs with immediate context about their security significance. Whether you're investigating an incident, building detection rules, or simply learning about Windows event logs, this tool provides fast access to event documentation with MITRE ATT&CK® mappings.
+Windows Event Threat Navigator (WETNav) is a quick reference tool built to solve a common analyst problem: rapidly looking up Windows Security and Sysmon event IDs with immediate context about their security significance. Whether you're investigating an incident, building detection rules, or simply learning about Windows event logs, this tool provides fast access to event documentation with MITRE ATT&CK® mappings.
 
 **This is an experimental reference tool**, not a production-ready security product. It serves as a helpful utility for speeding up the common analyst task of understanding Windows event context and potential security implications.
 
@@ -134,8 +134,8 @@ Experience WETN in action: **[wetnav.patelhari.com](https://wetnav.patelhari.com
 
 ```bash
 # Clone the repository
-git clone https://github.com/packetwarden/WETN-vercel.git
-cd WETN-vercel
+git clone https://github.com/packetwarden/WETNav
+cd WETNav-vercel
 
 # Install dependencies
 npm install
@@ -233,8 +233,8 @@ Please open an issue or pull request on GitHub.
 ## 📧 Contact & Support
 
 - **Live Demo**: [wetnav.patelhari.com](https://wetnav.patelhari.com)
-- **GitHub Repository**: [github.com/packetwarden/WETN-vercel](https://github.com/packetwarden/WETN-vercel)
-- **Issue Tracker**: [GitHub Issues](https://github.com/packetwarden/WETN-vercel/issues)
+- **GitHub Repository**: [github.com/packetwarden/WETNav](https://github.com/packetwarden/WETNav)
+- **Issue Tracker**: [GitHub Issues](https://github.com/packetwarden/WETNav/issues)
 - **Author**: Hari Patel - Cybersecurity Researcher
 
 ---
