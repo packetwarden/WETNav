@@ -63,7 +63,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-100 mb-6 leading-tight">
-              Master Windows Event Log Analysis for{' '}
+              <span className="block">Master Windows Event Log Analysis for</span>
               <HeroTextAnimation />
             </h1>
 

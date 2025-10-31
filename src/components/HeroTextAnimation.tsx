@@ -29,10 +29,9 @@ export default function HeroTextAnimation() {
 
   return (
     <span
-      className={`inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 transition-opacity duration-500 ${
+      className={`block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 transition-opacity duration-500 ${
         isAnimating ? 'opacity-0' : 'opacity-100'
       }`}
-      style={{ minWidth: '280px', textAlign: 'center' }}
     >
       {ROTATING_WORDS[currentWordIndex]}
     </span>
