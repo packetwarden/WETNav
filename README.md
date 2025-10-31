@@ -1,137 +1,262 @@
-# Windows Event Threat Navigator 🧭✨
+# Windows Event Threat Navigator 🧭
 
-**An experimental, vibe-coded quick reference tool for Windows Security & Sysmon events, built with Gemini 2.5 Pro Preview.**
+**A fast reference tool for Windows Security & Sysmon events, designed for SOC analysts, threat hunters, and incident responders.**
 
-<!-- <<< Add a compelling screenshot/GIF of the application here! >>> -->
-<!-- Example: ![App Screenshot](link/to/your/screenshot.png) -->
-[![Vercel Deployment](https://vercel.com/button)](https://vercel.com/new/clone?https://github.com/packetwarden/WETNav)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://wetnav.patelhari.com)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/packetwarden/WETNav)
+
+![License](https://img.shields.io/badge/License-MIT-green)
+![Next.js](https://img.shields.io/badge/Next.js-14-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+
 ---
 
-## About This Project: The Vibe ✨
+## 🎯 About This Project
 
-This project started as a "vibe coding" session – an exploration into building a simple, yet genuinely useful tool for security analysts, particularly those in SOC roles or involved in threat hunting and incident response. The core idea was to create a fast, accessible way to look up Windows Security and Sysmon event IDs and get immediate context, including potential links to adversary tactics via MITRE ATT&CK®.
+Windows Event Threat Navigator (WETNav) is a quick reference tool built to solve a common analyst problem: rapidly looking up Windows Security and Sysmon event IDs with immediate context about their security significance. Whether you're investigating an incident, building detection rules, or simply learning about Windows event logs, this tool provides fast access to event documentation with MITRE ATT&CK® mappings.
 
-A significant part of this project involved collaborating with Google's **Gemini 2.5 Pro Preview (03-25)** AI model. From initial concept brainstorming based on Microsoft documentation to generating code snippets, refining UI/UX, debugging build errors, and even structuring data processing logic, Gemini served as a pair programmer and sounding board.
+**This is an experimental reference tool**, not a production-ready security product. It serves as a helpful utility for speeding up the common analyst task of understanding Windows event context and potential security implications.
 
-**This is not intended as a production-ready, fully validated security product.** Instead, think of it as a helpful utility born from experimentation, designed to speed up the common analyst task of looking up event details and understanding their potential significance.
+### Key Capabilities
+
+- **470+ Events Documented** - Windows Security (441 events) and Sysmon (29 events)
+- **MITRE ATT&CK® Integration** - Manual mappings to adversary techniques and tactics
+- **Enhanced Event Analysis** - In-depth security context for critical events
+- **Key Log Fields** - 152 events with exact field names and analyst guidance
+- **Fast Search & Filtering** - Instant lookup by Event ID, name, category, or MITRE technique
+
+---
 
 ## Core Functionality ⚡
 
-At its heart, this tool provides a searchable interface to:
+At its core, this tool provides a searchable interface to:
 
-1.  **Look up** Windows Security and Sysmon event IDs.
-2.  See the event's **name/description**.
-3.  View potential **MITRE ATT&CK® technique mappings**.
-4.  Access **notes on common scenarios** or analysis considerations.
-5.  Review **key log fields** that SOC/IR teams should focus on.
-6.  **Filter** events by source (Windows/Sysmon).
+1. **Look up** Windows Security and Sysmon event IDs
+2. View event **names, descriptions, and categories**
+3. Access **MITRE ATT&CK® technique mappings** for threat context
+4. Review **key log fields** that SOC/IR teams should focus on during analysis
+5. Read **analyst notes** on common scenarios and investigation tips
+6. Understand **security implications** and detection strategies
+7. **Filter events** by source (Windows/Sysmon) and category
+
+---
 
 ## Key Features 🚀
 
-*   **Unified Event Data:** Includes a broad range of Windows Security events and standard Sysmon events.
-*   **Fast Client-Side Search:** Instantly search across Event ID, Name, Category, MITRE ID/Name, and Notes.
-*   **Source Filtering:** Easily switch between Windows Security, Sysmon, or all events.
-*   **Interactive List-Detail View:** Clean list presentation with a dedicated panel showing full details for the selected event.
-*   **MITRE ATT&CK® Integration:**
-    *   Displays potential technique mappings within the detail view.
-    *   Uses **tabs with horizontal scrolling** for events mapped to multiple techniques.
-    *   Shows Technique ID, Name, Tactics (as tags), and cleaned Description derived from processed STIX data.
-    *   Includes important disclaimers about mapping interpretation.
-*   **Key Log Fields:**
-    *   Shows critical fields SOC/IR teams should focus on for each event (**152 events covered**).
-    *   Uses **exact technical field names** from Windows Event Logs (e.g., `SubjectUserName`, `LogonType`, `IpAddress`).
-    *   Provides detailed descriptions with examples, status codes, and correlation guidance.
-    *   Covers authentication, account management, process execution, network activity, policy changes, and more.
-*   **Contextual Notes:** Displays event categories and analyst-curated notes/scenarios where available.
-*   **Responsive Dark UI:** Clean, professional interface inspired by modern security tools, built with Tailwind CSS.
+### Event Coverage
+- **Unified Event Data** - Comprehensive Windows Security and Sysmon event database
+- **Enhanced Content** - Deep-dive analysis for critical security events with:
+  - Quick answer summaries for rapid triage
+  - Detailed explanations of event significance
+  - Security implications and threat context
+  - Detection strategies and baseline guidance
+  - Real-world attack examples from documented campaigns
+  - Related event correlations
 
-## Tech Stack & Build Process 🛠️
+### MITRE ATT&CK® Integration
+- **Manual Technique Mappings** - Events mapped to specific MITRE ATT&CK® techniques based on analyst research
+- **Rich Context** - View Technique ID, Name, Tactics, and Descriptions
+- **Investigation Starting Points** - Understand which adversary behaviors each event can detect
+- **Important Disclaimer** - All mappings are potential associations; context is critical for accurate threat assessment
 
-*   **Framework:** [Next.js](https://nextjs.org/) (React - App Router)
-*   **Language:** [TypeScript](https://www.typescriptlang.org/)
-*   **Styling:** [Tailwind CSS](https://tailwindcss.com/) (with `@tailwindcss/typography`)
-*   **Icons:** [React Icons](https://react-icons.github.io/react-icons/)
-*   **AI Collaboration:** [Gemini 2.5 Pro Preview (03-25)](https://deepmind.google/technologies/gemini/)
-*   **Deployment:** [Vercel](https://vercel.com/)
-*   **Code:** [GitHub](https://github.com/)
+### Key Log Fields (152 Events)
+- **Exact Technical Field Names** - Uses actual Windows Event Log field names (e.g., `SubjectUserName`, `LogonType`, `IpAddress`)
+- **Detailed Descriptions** - Field explanations with examples, status codes, and analysis guidance
+- **Coverage Areas** - Authentication, account management, process execution, network activity, policy changes, and more
+- **SOC/IR Focus** - Highlights the most critical fields for security analysis and threat hunting
 
-## Data: Sources & The Mapping Process 📊
+### Search & Filtering
+- **Fast Client-Side Search** - Instant results across Event ID, Name, Category, MITRE ID/Name, and Notes
+- **Source Filtering** - Switch between Windows Security, Sysmon, or all events
+- **Multiple View Modes** - Card view, list view, and detailed event pages
+- **Official Documentation Links** - Direct references to Microsoft documentation
 
-The tool relies on several data sources, processed and merged during the build:
+---
 
-1.  **Base Event Data (`/src/data/*.json`):**
-    *   Contains Event ID, Source, Name, Description (often same as Name), and Official Link.
-    *   Derived primarily from Microsoft documentation (Security Events, Sysmon) and user-provided datasets based on these sources.
+## Tech Stack 🛠️
 
-2.  **Manual Mappings (`/src/data/mappings/*.ts`):**
-    *   **`categories.ts`:** Manually assigns a category (e.g., "Authentication", "Process Execution") to each Event ID.
-    *   **`scenarios.ts`:** Manually curated notes, common legitimate uses, or analysis "gotchas" for specific Event IDs.
-    *   **`mitre.ts`:** **Crucially, this file manually maps specific Event IDs to one or more MITRE ATT&CK® Technique IDs (e.g., "T1059", "T1110.003").** This requires analyst research and judgment.
-    *   **`keyFields.ts`:** Maps Event IDs to critical log fields with exact technical field names and detailed descriptions. Covers 152 events across Windows Security and Sysmon, based on Microsoft documentation and security analysis best practices.
+- **Framework:** [Next.js](https://nextjs.org/) 14 (React with App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Icons:** [React Icons](https://react-icons.github.io/react-icons/)
+- **Deployment:** [Vercel](https://vercel.com/)
 
-3.  **Processed MITRE ATT&CK® Data (`/src/data/mitre_processed/techniques.json`):**
-    *   **Source:** Generated *offline* using a separate Python script (`process_stix.py` - available in repo history, requires manual execution) that parses the official `enterprise-attack.json` STIX bundle from [mitre-attack/attack-stix-data](https://github.com/mitre-attack/attack-stix-data/).
-    *   **Content:** Contains structured details (ID, Name, Description, Tactics, URL) for ATT&CK techniques referenced in the manual mapping. Descriptions are cleaned to remove citation markers.
+---
 
-4.  **Merging Logic (`/src/app/page.tsx`):**
-    *   The Next.js app (server-side) loads all the above data.
-    *   It iterates through the base events.
-    *   For each event, it looks up its Category, Scenarios, and Key Log Fields from the mapping files.
-    *   It uses the manual `mitre.ts` mapping to find relevant Technique IDs.
-    *   It then looks up the *full details* for those Technique IDs in the processed `techniques.json` data.
-    *   This merged `EventDetail` object (including the rich MITRE data and key fields) is passed to the client-side components.
+## Data Sources & Mapping Process 📊
 
-## Usage / Live Demo 🌐
+The tool integrates several data sources processed during build:
 
-Explore the deployed tool here:
+### 1. Base Event Data (`/src/data/*.json`)
+- Contains Event ID, Source, Name, Description, and Official Link
+- Derived primarily from Microsoft documentation for Security Events and Sysmon
 
-**>>> [Windows Event Threat Navigator](<<<YOUR_VERCEL_DEPLOYMENT_URL>>>) <<<**
+### 2. Manual Mappings (`/src/data/mappings/*.ts`)
+- **`categories.ts`** - Assigns categories (e.g., "Authentication", "Process Execution") to each Event ID
+- **`scenarios.ts`** - Curated notes, common legitimate uses, and analysis considerations for specific events
+- **`mitre.ts`** - **Manually maps Event IDs to MITRE ATT&CK® Technique IDs** (e.g., "T1059", "T1110.003") based on analyst research
+- **`keyFields.ts`** - Maps 152 events to critical log fields with exact technical names and detailed descriptions
 
-1.  **Search:** Type an Event ID, keyword, category, or MITRE ID/Name.
-2.  **Filter:** Click "Windows" or "Sysmon" buttons.
-3.  **Select:** Click an event row in the left list.
-4.  **Explore:** View details in the right panel. Use the tabs and scrollbars as needed.
+### 3. Processed MITRE ATT&CK® Data (`/src/data/mitre_processed/techniques.json`)
+- **Source:** Generated offline using `process_stix.py` script that parses the official `enterprise-attack.json` STIX bundle from [mitre-attack/attack-stix-data](https://github.com/mitre-attack/attack-stix-data/)
+- **Content:** Structured details (ID, Name, Description, Tactics, URL) for ATT&CK® techniques with cleaned descriptions
 
-## Running Locally (Experimentation) 🧪
+### 4. Merging Logic
+- Next.js app loads all data sources at build time
+- For each event, looks up Category, Scenarios, and Key Log Fields from mapping files
+- Uses manual MITRE mapping to find relevant Technique IDs
+- Retrieves full technique details from processed STIX data
+- Merged `EventDetail` objects are passed to client-side components
 
-Want to play around with the code?
+---
 
-1.  **Prerequisites:** Node.js (v18.17+), npm/yarn/pnpm.
-2.  **Clone:** `https://github.com/packetwarden/WETNav.git && cd WETNav`
-3.  **Install:** `npm install` (or yarn/pnpm)
-4.  **Run:** `npm run dev` (or yarn/pnpm)
-5.  Open [http://localhost:3000](http://localhost:3000).
+## 🌐 Live Demo
 
-*(Note: To update the MITRE technique details (`techniques.json`), you need Python 3 and the `enterprise-attack.json` STIX file to run the `process_stix.py` script manually.)*
+Experience WETN in action: **[wetnav.patelhari.com](https://wetnav.patelhari.com)**
+
+### How to Use
+
+1. **Search** - Type an Event ID, keyword, category, or MITRE technique
+2. **Filter** - Click "Windows" or "Sysmon" buttons to filter by source
+3. **Browse** - Scroll through the event list or use card/list view
+4. **Deep Dive** - Click any event to see comprehensive analysis
+5. **Learn** - Read detection strategies, real-world examples, and security implications
+
+---
+
+## 🧪 Running Locally
+
+### Prerequisites
+- Node.js 18.17 or higher
+- npm, yarn, or pnpm package manager
+
+### Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/packetwarden/WETNav.git
+cd WETNav
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Build for Production
+
+```bash
+# Create optimized production build
+npm run build
+
+# Start production server
+npm start
+```
+
+### Updating MITRE Data
+
+To update the MITRE ATT&CK® technique details (`techniques.json`):
+1. Download the latest `enterprise-attack.json` STIX bundle from [mitre-attack/attack-stix-data](https://github.com/mitre-attack/attack-stix-data/)
+2. Run the `process_stix.py` Python script (requires Python 3)
+3. Copy the generated `techniques.json` to `/src/data/mitre_processed/`
+
+---
 
 ## Important Disclaimers ⚠️
 
-*   **Experimental:** This is a side project ("vibe coding") and NOT a production-ready security tool. Use it as a reference aid only.
-*   **Data Accuracy:** Event descriptions and mappings are based on public data and manual interpretation. They may contain errors, omissions, or become outdated. **Always verify information** against official documentation and your own analysis.
-*   **MITRE Mapping Context:** The ATT&CK® mappings are *potential* associations. An event occurring does **not** definitively mean the mapped technique was used maliciously. **Context is absolutely critical.** These mappings are intended as starting points for investigation.
-*   **No Guarantees:** This tool comes with no warranties. Use at your own discretion.
+### Experimental Nature
+This is a side project and **NOT a production-ready security tool**. Use it as a reference aid only. Always verify information against official documentation and your own analysis.
 
-## Future Vibes / Ideas 🤔
+### Data Accuracy
+Event descriptions and mappings are based on public data and manual interpretation. They may contain errors, omissions, or become outdated. **Always verify critical information** against official Microsoft documentation and current threat intelligence.
 
-*   Implement more advanced search syntax (AND, NOT, field specifiers).
-*   Add more comprehensive manual MITRE mappings and scenarios.
-*   Expand Key Log Fields coverage to additional events.
-*   Integrate Sysmon configuration guidance links.
-*   UI/UX refinements (loading states, animations).
-*   Theme toggle (Light/Dark).
+### MITRE ATT&CK® Mapping Context
+The ATT&CK® mappings represent **potential associations** between events and adversary techniques. An event occurring does **NOT** definitively mean the mapped technique was used maliciously. **Context is absolutely critical** - these mappings are intended as investigation starting points, not definitive indicators of compromise.
 
-## Acknowledgements 🙏
+### No Guarantees
+This tool comes with no warranties or guarantees. Use at your own discretion and risk.
 
-*   **Microsoft:** For providing comprehensive documentation on Windows Security Events and Sysmon.
-*   **MITRE ATT&CK®:** This project utilizes ATT&CK® content. ATT&CK® is a registered trademark of The MITRE Corporation. **"© 2024 The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation."** ([MITRE ATT&CK Website](https://attack.mitre.org/), [License](https://attack.mitre.org/resources/terms-of-use/))
-*   **Sysinternals:** For the powerful Sysmon tool.
-*   **Gemini 2.5 Pro Preview (03-25):** For extensive assistance during the development process.
-*   **Tailwind Labs & React Icons contributors.**
+---
 
-## License 📄
+## 🗺️ Roadmap
 
-<!-- <<< Choose a license (e.g., MIT, Apache 2.0) and add it here >>> -->
-<!-- Example: Licensed under the MIT License. See the [LICENSE](LICENSE) file. -->
+### Planned Features
+- **SIEM Detection Queries** - Pre-built queries for Splunk SPL, Microsoft Sentinel KQL, and Elastic Query DSL
+- **Advanced Search Syntax** - Boolean operators (AND, OR, NOT) and field-specific search
+- **Threat Actor Profiles** - Link events to known threat actor TTPs and campaigns
+- **Export Functionality** - Export event details as PDF, Markdown, or JSON
+- **API Access** - RESTful API for programmatic access to event data
+
+### Content Expansion
+- Expand MITRE ATT&CK® mappings to additional events
+- Add more enhanced event analysis with real-world examples
+- Include Sysmon configuration recommendations
+- Add Windows Event Forwarding (WEF) guidance
+- Create detection rule templates for popular SIEM platforms
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Whether it's:
+- Adding or improving MITRE ATT&CK® mappings
+- Enhancing event analysis and detection guidance
+- Fixing bugs or data errors
+- Improving documentation
+- Suggesting new features
+
+Please open an issue or pull request on GitHub.
+
+### Development Guidelines
+- Follow TypeScript best practices
+- Test changes thoroughly before submitting
+- Include clear commit messages
+- Update documentation as needed
+
+---
+
+## 🙏 Acknowledgements
+
+- **Microsoft** - For comprehensive Windows Security Events and Sysmon documentation
+- **MITRE ATT&CK®** - This project utilizes ATT&CK® content. ATT&CK® is a registered trademark of The MITRE Corporation. "© 2024 The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation." ([MITRE ATT&CK Website](https://attack.mitre.org/), [Terms of Use](https://attack.mitre.org/resources/terms-of-use/))
+- **Microsoft Sysinternals** - For the powerful Sysmon tool
+- **Next.js Team** - For the excellent React framework
+- **Tailwind Labs** - For the utility-first CSS framework
+- **Vercel** - For seamless deployment and hosting
+- **Open Source Community** - For countless tools and libraries that made this possible
+
+---
+
+## 📧 Contact & Support
+
+- **Live Demo**: [wetnav.patelhari.com](https://wetnav.patelhari.com)
+- **GitHub Repository**: [github.com/packetwarden/WETNav](https://github.com/packetwarden/WETNav)
+- **Issue Tracker**: [GitHub Issues](https://github.com/packetwarden/WETNav/issues)
+- **Author**: Hari Patel - Cybersecurity Researcher
+
+---
+
+## 📄 License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### Third-Party Licenses
+- MITRE ATT&CK® content used under their terms of use
+- Microsoft documentation referenced under fair use principles
+- All open source libraries used under their respective licenses
+
+---
+
+**Built for the security community**
+
+If this tool has helped you in your security operations, consider:
+- ⭐ Starring the repository
+- 🐛 Reporting issues or bugs
+- 💡 Suggesting features or improvements
+- 🤝 Contributing code or documentation
+- 📢 Sharing with fellow security professionals
 
 ---

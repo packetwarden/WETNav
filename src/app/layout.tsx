@@ -90,7 +90,7 @@ export default function RootLayout({
     "logo": `${SITE_URL}/logo.png`,
     "description": TOOL_DESCRIPTION,
     "sameAs": [
-      "https://github.com/packetwarden/WETN-vercel"
+      "https://github.com/packetwarden/WETNav"
     ],
     "founder": {
       "@type": "Person",
@@ -102,13 +102,29 @@ export default function RootLayout({
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Technical Support",
-      "url": "https://github.com/packetwarden/WETN-vercel/issues"
+      "url": "https://github.com/packetwarden/WETNav/issues"
     }
   };
 
   return (
     <html lang="en" className="dark">
       <head>
+        {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-45QHJVS20N"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-45QHJVS20N');
+            `,
+          }}
+        />
+        {/* Organization Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
