@@ -8,6 +8,9 @@ import { FiArrowLeft, FiAlertCircle, FiShield, FiActivity, FiCheckCircle } from 
 import { getEventById, getAllEventIds } from "@/lib/eventData";
 import { getEnhancedContent, hasEnhancedContent } from "@/lib/enhancedContent";
 import EventDetailView from "@/components/EventDetailView";
+import CollapsibleAlert from "@/components/CollapsibleAlert";
+import MitreTechniquesGrid from "@/components/MitreTechniquesGrid";
+import TableOfContents from "@/components/TableOfContents";
 
 const SITE_URL = "https://wetnav.patelhari.com";
 const AUTHOR_NAME = "Hari Patel";
@@ -184,6 +187,19 @@ export default function EventPage({ params }: { params: { id: string } }) {
     }),
   };
 
+  // Build table of contents based on available sections
+  const tocSections = [
+    { id: 'quick-answer', title: 'Quick Answer', available: !!enhancedContent },
+    { id: 'technical-details', title: 'Technical Details', available: true },
+    { id: 'mitre-mapping', title: 'MITRE ATT&CK Mapping', available: !!(event.mitreAttack && event.mitreAttack.length > 0) },
+    { id: 'event-comparison', title: 'Event Comparison', available: !!enhancedContent?.comparisonNote },
+    { id: 'what-this-means', title: 'What This Event Means', available: !!enhancedContent?.detailedExplanation },
+    { id: 'security-implications', title: 'Security Implications', available: !!(enhancedContent?.securityImplications && enhancedContent.securityImplications.length > 0) },
+    { id: 'detection-strategies', title: 'Detection Strategies', available: !!enhancedContent?.detectionStrategies },
+    { id: 'real-world-examples', title: 'Real-World Attack Examples', available: !!(enhancedContent?.realWorldExamples && enhancedContent.realWorldExamples.length > 0) },
+    { id: 'related-events', title: 'Related Events', available: !!(enhancedContent?.relatedEvents && enhancedContent.relatedEvents.length > 0) },
+  ];
+
   return (
     <>
       {/* Breadcrumb Schema */}
@@ -199,17 +215,20 @@ export default function EventPage({ params }: { params: { id: string } }) {
       />
 
       <main className="min-h-screen p-4 md:p-8 lg:p-12 bg-gray-900">
-        <div className="w-full max-w-5xl mx-auto">
-          {/* Back Navigation */}
-          <nav className="mb-6" aria-label="Breadcrumb">
-            <Link
-              href="/events"
-              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
-            >
-              <FiArrowLeft className="h-4 w-4" />
-              <span>Back to All Events</span>
-            </Link>
-          </nav>
+        <div className="w-full max-w-7xl mx-auto">
+          <div className="lg:grid lg:grid-cols-[1fr_280px] lg:gap-8">
+            {/* Main Content Column */}
+            <div className="lg:col-span-1">
+              {/* Back Navigation */}
+              <nav className="mb-6" aria-label="Breadcrumb">
+                <Link
+                  href="/events"
+                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  <FiArrowLeft className="h-4 w-4" />
+                  <span>Back to All Events</span>
+                </Link>
+              </nav>
 
           {/* Page Header */}
           <header className="mb-8">
@@ -233,20 +252,20 @@ export default function EventPage({ params }: { params: { id: string } }) {
               Event {event.id}: {event.name}
             </h1>
 
-            {/* Quick Answer Section - AI Search Optimized */}
-            {enhancedContent && (
-              <div className="p-5 bg-blue-500/10 border border-blue-500/30 rounded-lg mb-6">
-                <div className="flex items-start gap-3">
-                  <FiAlertCircle className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h2 className="text-lg font-semibold text-blue-300 mb-2">Quick Answer</h2>
-                    <p className="text-slate-200 leading-relaxed">
-                      {enhancedContent.quickAnswer}
-                    </p>
+              {/* Quick Answer Section - AI Search Optimized */}
+              {enhancedContent && (
+                <div id="quick-answer" className="p-5 bg-blue-500/10 border border-blue-500/30 rounded-lg mb-6 scroll-mt-24">
+                  <div className="flex items-start gap-3">
+                    <FiAlertCircle className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h2 className="text-lg font-semibold text-blue-300 mb-2">Quick Answer</h2>
+                      <p className="text-slate-200 leading-relaxed">
+                        {enhancedContent.quickAnswer}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
 
             {!enhancedContent && (
               <p className="text-lg text-slate-300 leading-relaxed">
@@ -255,159 +274,127 @@ export default function EventPage({ params }: { params: { id: string } }) {
             )}
           </header>
 
-          {/* Enhanced Content Sections */}
-          {enhancedContent && (
-            <div className="space-y-6 mb-8">
-              {/* Detailed Explanation */}
-              <section className="bg-slate-800/50 rounded-lg border border-slate-700/80 p-6">
-                <h2 className="text-xl font-semibold text-slate-100 mb-4 flex items-center gap-2">
-                  <FiActivity className="h-5 w-5 text-blue-400" />
-                  What This Event Means
-                </h2>
-                <p className="text-slate-300 leading-relaxed">
-                  {enhancedContent.detailedExplanation}
-                </p>
-              </section>
-
-              {/* Security Implications */}
-              <section className="bg-slate-800/50 rounded-lg border border-slate-700/80 p-6">
-                <h2 className="text-xl font-semibold text-slate-100 mb-4 flex items-center gap-2">
-                  <FiShield className="h-5 w-5 text-red-400" />
-                  Security Implications
-                </h2>
-                <ul className="space-y-3">
-                  {enhancedContent.securityImplications.map((implication, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <span className="inline-block w-2 h-2 rounded-full bg-red-400 mt-2 flex-shrink-0"></span>
-                      <span className="text-slate-300 leading-relaxed">{implication}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-
-              {/* Detection Strategies */}
-              <section className="bg-slate-800/50 rounded-lg border border-slate-700/80 p-6">
-                <h2 className="text-xl font-semibold text-slate-100 mb-4">Detection Strategies</h2>
-                <p className="text-slate-300 leading-relaxed mb-4">
-                  {enhancedContent.detectionStrategies}
-                </p>
-                <div className="p-4 bg-amber-500/10 border border-amber-500/30 rounded-lg">
-                  <p className="text-sm text-amber-200">
-                    <strong>Note:</strong> Comprehensive SIEM detection queries for Splunk SPL, Microsoft KQL, and Elastic Query DSL will be added in future updates.
-                  </p>
+              {/* Reordered Content Sections - Professional Order for User Experience */}
+              <div className="space-y-6 mb-8">
+                {/* 1. Technical Details (Always visible) */}
+                <div id="technical-details" className="bg-slate-800/50 rounded-lg border border-slate-700/80 p-6 scroll-mt-24">
+                  <h2 className="text-xl font-semibold text-slate-100 mb-4">Technical Details</h2>
+                  <EventDetailView event={event} />
                 </div>
-              </section>
 
-              {/* Real-World Examples */}
-              {enhancedContent.realWorldExamples && enhancedContent.realWorldExamples.length > 0 && (
-                <section className="bg-slate-800/50 rounded-lg border border-slate-700/80 p-6">
-                  <h2 className="text-xl font-semibold text-slate-100 mb-4">Real-World Attack Examples</h2>
-                  <ul className="space-y-4">
-                    {enhancedContent.realWorldExamples.map((example, idx) => (
-                      <li key={idx} className="pl-4 border-l-2 border-blue-500">
-                        <p className="text-slate-300 leading-relaxed">{example}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
+                {/* 2. MITRE ATT&CK® Mapping (if available) */}
+                {event.mitreAttack && event.mitreAttack.length > 0 && (
+                  <section id="mitre-mapping" className="scroll-mt-24">
+                    {/* Professional Alert Note with Toggle */}
+                    <CollapsibleAlert title="Important Note on MITRE ATT&CK® Mappings">
+                      <p className="text-sm text-amber-200/90 leading-relaxed mb-2">
+                        The MITRE ATT&CK® technique mappings presented below are based on manual interpretation and analysis of Windows Event Log behavior. These mappings are <strong>not official</strong> MITRE designations and should be used as <strong>investigative guidance only</strong>.
+                      </p>
+                      <ul className="text-xs text-amber-200/80 space-y-1 list-disc list-inside">
+                        <li>Mappings suggest potential adversary techniques that may generate this event</li>
+                        <li>Detection requires correlation with additional events and environmental context</li>
+                        <li>Always verify findings with comprehensive log analysis and threat intelligence</li>
+                      </ul>
+                    </CollapsibleAlert>
 
-              {/* Comparison Note */}
-              {enhancedContent.comparisonNote && (
-                <div className="p-5 bg-purple-500/10 border border-purple-500/30 rounded-lg">
-                  <h3 className="text-sm font-semibold text-purple-300 mb-2">Event Comparison</h3>
-                  <p className="text-sm text-slate-300 leading-relaxed">
-                    {enhancedContent.comparisonNote}
-                  </p>
-                </div>
-              )}
+                    {/* MITRE Techniques Grid with Show More/Less functionality */}
+                    <MitreTechniquesGrid techniques={event.mitreAttack} initialDisplayCount={4} />
+                  </section>
+                )}
 
-              {/* Related Events */}
-              {enhancedContent.relatedEvents && enhancedContent.relatedEvents.length > 0 && (
-                <section className="bg-slate-800/50 rounded-lg border border-slate-700/80 p-6">
-                  <h2 className="text-xl font-semibold text-slate-100 mb-4">Related Events</h2>
-                  <div className="flex flex-wrap gap-3">
-                    {enhancedContent.relatedEvents.map((relatedId) => (
-                      <Link
-                        key={relatedId}
-                        href={`/event/${relatedId}`}
-                        className="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-slate-700/50 text-slate-200 border border-slate-600/50 hover:border-blue-500/50 hover:bg-slate-700 transition-all"
-                      >
-                        Event {relatedId}
-                      </Link>
-                    ))}
-                  </div>
-                </section>
-              )}
-            </div>
-          )}
-
-          {/* Original Event Detail View */}
-          <div className="bg-slate-800/50 rounded-lg border border-slate-700/80 p-6">
-            <h2 className="text-xl font-semibold text-slate-100 mb-4">Technical Details</h2>
-            <EventDetailView event={event} />
-          </div>
-
-          {/* MITRE ATT&CK® Mapping */}
-          {event.mitreAttack && event.mitreAttack.length > 0 && (
-            <section className="mt-8">
-              {/* Professional Alert Note */}
-              <div className="mb-6 p-4 bg-amber-500/10 border border-amber-500/30 rounded-lg">
-                <div className="flex items-start gap-3">
-                  <FiAlertCircle className="h-5 w-5 text-amber-400 mt-0.5 flex-shrink-0" />
-                  <div className="flex-1">
-                    <h3 className="text-sm font-semibold text-amber-300 mb-2">Important Note on MITRE ATT&CK® Mappings</h3>
-                    <p className="text-sm text-amber-200/90 leading-relaxed mb-2">
-                      The MITRE ATT&CK® technique mappings presented below are based on manual interpretation and analysis of Windows Event Log behavior. These mappings are <strong>not official</strong> MITRE designations and should be used as <strong>investigative guidance only</strong>.
+                {/* 3. Event Comparison (if available) */}
+                {enhancedContent?.comparisonNote && (
+                  <div id="event-comparison" className="p-5 bg-purple-500/10 border border-purple-500/30 rounded-lg scroll-mt-24">
+                    <h3 className="text-sm font-semibold text-purple-300 mb-2">Event Comparison</h3>
+                    <p className="text-sm text-slate-300 leading-relaxed">
+                      {enhancedContent.comparisonNote}
                     </p>
-                    <ul className="text-xs text-amber-200/80 space-y-1 list-disc list-inside">
-                      <li>Mappings suggest potential adversary techniques that may generate this event</li>
-                      <li>Detection requires correlation with additional events and environmental context</li>
-                      <li>Always verify findings with comprehensive log analysis and threat intelligence</li>
-                    </ul>
                   </div>
-                </div>
-              </div>
+                )}
 
-              {/* MITRE Techniques Grid */}
-              <div className="p-6 bg-slate-800/30 rounded-lg border border-slate-700/60">
-                <h2 className="text-xl font-semibold text-slate-100 mb-4 flex items-center gap-2">
-                  <FiShield className="h-5 w-5 text-red-400" />
-                  MITRE ATT&CK® Mapping ({event.mitreAttack.length})
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {event.mitreAttack.map((technique) => (
-                  <a
-                    key={technique.id}
-                    href={technique.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-start gap-3 p-4 bg-slate-700/40 rounded-lg border border-slate-600/50 hover:border-blue-500/50 hover:bg-slate-700/60 transition-all"
-                  >
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1 flex-wrap">
-                        <span className="text-sm font-mono text-blue-400">
-                          {technique.id}
-                        </span>
-                        <span className="text-xs px-2 py-0.5 rounded-full bg-slate-600/50 text-slate-300">
-                          {technique.tactic}
-                        </span>
-                      </div>
-                      <div className="text-sm font-medium text-slate-200 mb-1">
-                        {technique.name}
-                      </div>
-                      {technique.description && (
-                        <p className="text-xs text-slate-400 line-clamp-2">
-                          {technique.description}
-                        </p>
-                      )}
+                {/* 4. What This Event Means (if available) */}
+                {enhancedContent?.detailedExplanation && (
+                  <section id="what-this-means" className="bg-slate-800/50 rounded-lg border border-slate-700/80 p-6 scroll-mt-24">
+                    <h2 className="text-xl font-semibold text-slate-100 mb-4 flex items-center gap-2">
+                      <FiActivity className="h-5 w-5 text-blue-400" />
+                      What This Event Means
+                    </h2>
+                    <p className="text-slate-300 leading-relaxed">
+                      {enhancedContent.detailedExplanation}
+                    </p>
+                  </section>
+                )}
+
+                {/* 5. Security Implications (if available) */}
+                {enhancedContent?.securityImplications && enhancedContent.securityImplications.length > 0 && (
+                  <section id="security-implications" className="bg-slate-800/50 rounded-lg border border-slate-700/80 p-6 scroll-mt-24">
+                    <h2 className="text-xl font-semibold text-slate-100 mb-4 flex items-center gap-2">
+                      <FiShield className="h-5 w-5 text-red-400" />
+                      Security Implications
+                    </h2>
+                    <ul className="space-y-3">
+                      {enhancedContent.securityImplications.map((implication, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="inline-block w-2 h-2 rounded-full bg-red-400 mt-2 flex-shrink-0"></span>
+                          <span className="text-slate-300 leading-relaxed">{implication}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {/* 6. Detection Strategies (if available) */}
+                {enhancedContent?.detectionStrategies && (
+                  <section id="detection-strategies" className="bg-slate-800/50 rounded-lg border border-slate-700/80 p-6 scroll-mt-24">
+                    <h2 className="text-xl font-semibold text-slate-100 mb-4">Detection Strategies</h2>
+                    <p className="text-slate-300 leading-relaxed mb-4">
+                      {enhancedContent.detectionStrategies}
+                    </p>
+                    <div className="p-4 bg-amber-500/10 border border-amber-500/30 rounded-lg">
+                      <p className="text-sm text-amber-200">
+                        <strong>Note:</strong> Comprehensive SIEM detection queries for Splunk SPL, Microsoft KQL, and Elastic Query DSL will be added in future updates.
+                      </p>
                     </div>
-                  </a>
-                ))}
-                </div>
+                  </section>
+                )}
+
+                {/* 7. Real-World Attack Examples (if available) */}
+                {enhancedContent?.realWorldExamples && enhancedContent.realWorldExamples.length > 0 && (
+                  <section id="real-world-examples" className="bg-slate-800/50 rounded-lg border border-slate-700/80 p-6 scroll-mt-24">
+                    <h2 className="text-xl font-semibold text-slate-100 mb-4">Real-World Attack Examples</h2>
+                    <ul className="space-y-4">
+                      {enhancedContent.realWorldExamples.map((example, idx) => (
+                        <li key={idx} className="pl-4 border-l-2 border-blue-500">
+                          <p className="text-slate-300 leading-relaxed">{example}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {/* 8. Related Events (if available) */}
+                {enhancedContent?.relatedEvents && enhancedContent.relatedEvents.length > 0 && (
+                  <section id="related-events" className="bg-slate-800/50 rounded-lg border border-slate-700/80 p-6 scroll-mt-24">
+                    <h2 className="text-xl font-semibold text-slate-100 mb-4">Related Events</h2>
+                    <div className="flex flex-wrap gap-3">
+                      {enhancedContent.relatedEvents.map((relatedId) => (
+                        <Link
+                          key={relatedId}
+                          href={`/event/${relatedId}`}
+                          className="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-slate-700/50 text-slate-200 border border-slate-600/50 hover:border-blue-500/50 hover:bg-slate-700 transition-all"
+                        >
+                          Event {relatedId}
+                        </Link>
+                      ))}
+                    </div>
+                  </section>
+                )}
               </div>
-            </section>
-          )}
+            </div>
+
+            {/* Table of Contents Sidebar */}
+            <TableOfContents sections={tocSections} />
+          </div>
         </div>
       </main>
     </>

@@ -5,6 +5,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { FiSearch, FiShield, FiActivity, FiZap, FiBook, FiUsers, FiCheckCircle, FiArrowRight, FiDatabase } from 'react-icons/fi';
 import { getAllEvents, getTopExploitedEvents } from "@/lib/eventData";
+import HeroTextAnimation from '@/components/HeroTextAnimation';
+import FAQItem from '@/components/FAQItem';
 
 const SITE_URL = "https://wetnav.patelhari.com";
 
@@ -62,9 +64,7 @@ export default function Home() {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-100 mb-6 leading-tight">
               Master Windows Event Log Analysis for{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Threat Detection
-              </span>
+              <HeroTextAnimation />
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
@@ -259,48 +259,48 @@ export default function Home() {
       <section className="bg-slate-900 border-b border-slate-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl font-bold text-slate-100 mb-12 text-center">Frequently Asked Questions</h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-100 mb-3">Which Windows events are most important for security monitoring?</h3>
-              <p className="text-slate-300 leading-relaxed">
-                The most critical Windows events for threat detection include Event 4624 (successful logon), Event 4625 (failed logon), Event 4688 (process creation), Event 4672 (special privileges assigned), Event 4720 (user account created), Event 4732 (member added to security group), and Event 4698 (scheduled task created). For Sysmon, prioritize Event 1 (process creation), Event 3 (network connection), Event 7 (image loaded), Event 10 (process access), and Event 22 (DNS query). These events provide visibility into authentication, privilege escalation, lateral movement, persistence, and command-and-control communications commonly used in attacks.
-              </p>
-            </div>
+          <div className="space-y-4">
+            <FAQItem
+              question="Which Windows events are most important for security monitoring?"
+              answer="The most critical Windows events for threat detection include Event 4624 (successful logon), Event 4625 (failed logon), Event 4688 (process creation), Event 4672 (special privileges assigned), Event 4720 (user account created), Event 4732 (member added to security group), and Event 4698 (scheduled task created). For Sysmon, prioritize Event 1 (process creation), Event 3 (network connection), Event 7 (image loaded), Event 10 (process access), and Event 22 (DNS query). These events provide visibility into authentication, privilege escalation, lateral movement, persistence, and command-and-control communications commonly used in attacks."
+            />
 
-            <div>
-              <h3 className="text-xl font-semibold text-slate-100 mb-3">What is the difference between Windows Security and Sysmon events?</h3>
-              <p className="text-slate-300 leading-relaxed">
-                Windows Security events are built into the Windows operating system and generated automatically when security auditing is enabled through Group Policy. These 441 events cover authentication, account management, policy changes, and system events. Sysmon (System Monitor) is a separate tool from Microsoft Sysinternals that provides 29 additional events with much more detailed information including file hashes, parent process command lines, network connections with process attribution, and DLL loading. Sysmon must be manually installed and configured but provides significantly enhanced visibility for threat detection compared to native Windows logging alone.
-              </p>
-            </div>
+            <FAQItem
+              question="What is the difference between Windows Security and Sysmon events?"
+              answer="Windows Security events are built into the Windows operating system and generated automatically when security auditing is enabled through Group Policy. These 441 events cover authentication, account management, policy changes, and system events. Sysmon (System Monitor) is a separate tool from Microsoft Sysinternals that provides 29 additional events with much more detailed information including file hashes, parent process command lines, network connections with process attribution, and DLL loading. Sysmon must be manually installed and configured but provides significantly enhanced visibility for threat detection compared to native Windows logging alone."
+            />
 
-            <div>
-              <h3 className="text-xl font-semibold text-slate-100 mb-3">How do I enable Windows Security event logging?</h3>
-              <p className="text-slate-300 leading-relaxed">
-                Enable Windows Security event logging through Group Policy by navigating to Computer Configuration → Windows Settings → Security Settings → Advanced Audit Policy Configuration. Configure audit policies for categories like Logon/Logoff, Account Management, Object Access, Privilege Use, and Detailed Tracking based on your monitoring requirements. For comprehensive security monitoring, enable success and failure auditing for authentication events, success-only for process creation, and configure object-level auditing (SACL) on high-value files and directories. Visit our <Link href="/guides/windows-events" className="text-blue-400 hover:text-blue-300">Getting Started Guide</Link> for detailed configuration instructions.
-              </p>
-            </div>
+            <FAQItem
+              question="How do I enable Windows Security event logging?"
+              answer={
+                <>
+                  Enable Windows Security event logging through Group Policy by navigating to Computer Configuration → Windows Settings → Security Settings → Advanced Audit Policy Configuration. Configure audit policies for categories like Logon/Logoff, Account Management, Object Access, Privilege Use, and Detailed Tracking based on your monitoring requirements. For comprehensive security monitoring, enable success and failure auditing for authentication events, success-only for process creation, and configure object-level auditing (SACL) on high-value files and directories. Visit our <Link href="/guides/windows-events" className="text-blue-400 hover:text-blue-300">Getting Started Guide</Link> for detailed configuration instructions.
+                </>
+              }
+            />
 
-            <div>
-              <h3 className="text-xl font-semibold text-slate-100 mb-3">How should I install and configure Sysmon?</h3>
-              <p className="text-slate-300 leading-relaxed">
-                Download Sysmon from Microsoft Sysinternals, then install it with a configuration file that defines which events to log and what to exclude. Use community-maintained configurations like SwiftOnSecurity's sysmon-config or Olaf Hartong's sysmon-modular as starting points. Install via command line: <code className="px-2 py-1 bg-slate-800 rounded text-sm font-mono text-slate-300">sysmon64.exe -accepteula -i config.xml</code>. Test in a lab environment first to understand log volume and adjust filters as needed. Deploy enterprise-wide using Group Policy or configuration management tools. See our comprehensive <Link href="/guides/sysmon" className="text-blue-400 hover:text-blue-300">Sysmon Installation Guide</Link> for step-by-step instructions.
-              </p>
-            </div>
+            <FAQItem
+              question="How should I install and configure Sysmon?"
+              answer={
+                <>
+                  Download Sysmon from Microsoft Sysinternals, then install it with a configuration file that defines which events to log and what to exclude. Use community-maintained configurations like SwiftOnSecurity's sysmon-config or Olaf Hartong's sysmon-modular as starting points. Install via command line: <code className="px-2 py-1 bg-slate-800 rounded text-sm font-mono text-slate-300">sysmon64.exe -accepteula -i config.xml</code>. Test in a lab environment first to understand log volume and adjust filters as needed. Deploy enterprise-wide using Group Policy or configuration management tools. See our comprehensive <Link href="/guides/sysmon" className="text-blue-400 hover:text-blue-300">Sysmon Installation Guide</Link> for step-by-step instructions.
+                </>
+              }
+            />
 
-            <div>
-              <h3 className="text-xl font-semibold text-slate-100 mb-3">Can I use this tool for SIEM detection rule development?</h3>
-              <p className="text-slate-300 leading-relaxed">
-                Yes, the Windows Event Threat Navigator is designed to support SIEM detection rule development. Each critical event includes detection strategies describing baseline behavior, anomalous patterns to alert on, and correlation logic for combining multiple events. The MITRE ATT&CK mappings help identify which events detect specific adversary techniques. While comprehensive SIEM queries for platforms like Splunk SPL, Microsoft Sentinel KQL, and Elastic Query DSL are planned for future releases, the current detection guidance provides the conceptual foundation for building effective rules in any SIEM platform. Use the documented security implications and real-world examples to inform your rule logic and reduce false positives.
-              </p>
-            </div>
+            <FAQItem
+              question="Can I use this tool for SIEM detection rule development?"
+              answer="Yes, the Windows Event Threat Navigator is designed to support SIEM detection rule development. Each critical event includes detection strategies describing baseline behavior, anomalous patterns to alert on, and correlation logic for combining multiple events. The MITRE ATT&CK mappings help identify which events detect specific adversary techniques. While comprehensive SIEM queries for platforms like Splunk SPL, Microsoft Sentinel KQL, and Elastic Query DSL are planned for future releases, the current detection guidance provides the conceptual foundation for building effective rules in any SIEM platform. Use the documented security implications and real-world examples to inform your rule logic and reduce false positives."
+            />
 
-            <div>
-              <h3 className="text-xl font-semibold text-slate-100 mb-3">What other tools complement Windows event log analysis?</h3>
-              <p className="text-slate-300 leading-relaxed">
-                Several tools enhance Windows security monitoring capabilities beyond event logs. Process Monitor (Procmon) provides real-time detailed monitoring of process, file system, and registry activity with powerful filtering. Process Explorer shows running processes, their relationships, DLLs loaded, network connections, and resource usage. Event Tracing for Windows (ETW) offers programmatic access to kernel and user-mode event providers for custom instrumentation. WEFFLES (Windows Event Forwarding For The Masses) enables centralized log collection. These tools work alongside event log monitoring to provide comprehensive endpoint visibility. Learn more about complementary security tools in our <Link href="/guides/tools" className="text-blue-400 hover:text-blue-300">Related Tools Guide</Link>.
-              </p>
-            </div>
+            <FAQItem
+              question="What other tools complement Windows event log analysis?"
+              answer={
+                <>
+                  Several tools enhance Windows security monitoring capabilities beyond event logs. Process Monitor (Procmon) provides real-time detailed monitoring of process, file system, and registry activity with powerful filtering. Process Explorer shows running processes, their relationships, DLLs loaded, network connections, and resource usage. Event Tracing for Windows (ETW) offers programmatic access to kernel and user-mode event providers for custom instrumentation. WEFFLES (Windows Event Forwarding For The Masses) enables centralized log collection. These tools work alongside event log monitoring to provide comprehensive endpoint visibility. Learn more about complementary security tools in our <Link href="/guides/tools" className="text-blue-400 hover:text-blue-300">Related Tools Guide</Link>.
+                </>
+              }
+            />
           </div>
         </div>
       </section>
