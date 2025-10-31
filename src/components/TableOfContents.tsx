@@ -120,30 +120,30 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
         </nav>
       </div>
 
-      {/* Desktop Sticky Sidebar */}
+      {/* Desktop Sticky Sidebar - Professional Minimal Design */}
       <div className="hidden lg:block">
         <div className="sticky top-24">
-          <div className="bg-slate-800/50 rounded-lg border border-slate-700/80 p-4 max-w-xs">
-            <h2 className="text-sm font-semibold text-slate-100 mb-3 px-3">On This Page</h2>
-            <nav>
-              <ul className="space-y-1">
-                {availableSections.map((section) => (
-                  <li key={section.id}>
-                    <button
-                      onClick={() => scrollToSection(section.id)}
-                      className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
-                        activeSection === section.id
-                          ? 'bg-blue-500/20 text-blue-300 font-medium border-l-2 border-blue-400'
-                          : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200 border-l-2 border-transparent'
-                      }`}
-                    >
-                      {section.title}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
+          <nav className="space-y-1">
+            <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-4 px-1">
+              On This Page
+            </h2>
+            <ul className="space-y-0.5 border-l-2 border-slate-800">
+              {availableSections.map((section) => (
+                <li key={section.id}>
+                  <button
+                    onClick={() => scrollToSection(section.id)}
+                    className={`w-full text-left px-4 py-2 text-sm transition-all duration-200 block relative ${
+                      activeSection === section.id
+                        ? 'text-blue-400 font-medium -ml-0.5 border-l-2 border-blue-400'
+                        : 'text-slate-400 hover:text-slate-200 border-l-2 border-transparent -ml-0.5'
+                    }`}
+                  >
+                    {section.title}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
     </>
