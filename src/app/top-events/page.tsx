@@ -55,7 +55,7 @@ export default function TopEventsPage() {
     "@type": "ItemList",
     "name": "Top Exploited Windows Security Events",
     "description": "Most critical and frequently exploited Windows Security and Sysmon events for threat hunting and security monitoring",
-    "url": "https://wetnavigator.com/top-events",
+    "url": "https://wetnav.patelhari.com/top-events",
     "numberOfItems": topEvents.length,
     "itemListElement": topEvents.map((event, index) => ({
       "@type": "ListItem",
@@ -64,7 +64,7 @@ export default function TopEventsPage() {
         "@type": "TechArticle",
         "name": `${event.source} Event ${event.id}: ${event.name}`,
         "description": event.description,
-        "url": `https://wetnavigator.com/event/${event.id}`,
+        "url": `https://wetnav.patelhari.com/event/${event.id}`,
         "articleSection": "Security",
         "keywords": [event.name, `Event ${event.id}`, event.source].join(", "),
       },
